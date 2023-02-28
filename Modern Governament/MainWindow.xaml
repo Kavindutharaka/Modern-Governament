@@ -1,0 +1,172 @@
+﻿<Window x:Class="Modern_Governament.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Modern_Governament"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1366"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#1a1c28"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition />
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Name="btn_minimize"
+                Content="-"
+                Foreground="White"
+                FontSize="20"
+                FontFamily="Dosis SemiBold"
+                Cursor="Hand"
+                Grid.Column="0"
+                Height="30" Width="30"
+                Click="btn_minimize_Click"
+                Margin="1180,0,0,0" FontWeight="Medium"
+                >
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#1a1c28"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="30" Height="30"
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+
+        <Button Name="btn_close"
+                Content="X"
+                Foreground="White"
+                FontSize="13"
+                FontFamily="Dosis SemiBold"
+                Cursor="Hand"
+                Grid.Column="0"
+                Height="30" Width="30"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Click="btn_close_Click"
+                Margin="1250,0,0,0">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#1a1c28"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="30" Height="30"
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+
+        <Image Source="/Image/Logo.png"
+               Grid.Row="1"
+               Width="110" Height="2000"/>
+        <TextBlock Text="Welcome to Sri Lankan Government Service Center"
+                               Foreground="#ffffff"
+                               FontSize="32"
+                               FontWeight="Medium"
+                               FontFamily="Dosis SemiBold"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               Grid.Row="2"
+            >
+            
+        </TextBlock>
+        <Button
+            Name="btn_Login"
+            Content="LOGIN"
+            Foreground="#1a1c28"
+            FontSize="23"
+           Cursor="Hand"
+            Grid.Row="3"
+            Height="50" Width="180"
+            FontFamily="Dosis bold"
+            Click="btn_Login_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#00ffff"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="180" Height="50"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            
+        </Button>
+
+        <TextBlock Text="No Account?"
+                               Foreground="#fff"
+                               FontSize="24"
+                               FontWeight="Medium"
+                               FontFamily="Dosis"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                               Grid.Row="4"
+                   Margin="0,0,250,0"
+            >
+
+        </TextBlock>
+        <TextBlock Text="Contact Administration"
+                               Foreground="#ff008e"
+                               FontSize="24"
+                               FontWeight="Medium"
+                               FontFamily="Dosis"
+                               TextWrapping="Wrap"
+                               VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                               Grid.Row="4"
+                   Margin="150,0,0,0"
+            >
+
+        </TextBlock>
+    </Grid>
+</Window>
