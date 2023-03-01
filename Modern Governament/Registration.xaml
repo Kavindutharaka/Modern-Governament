@@ -1,0 +1,256 @@
+﻿<Window x:Class="Modern_Governament.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Modern_Governament"
+        mc:Ignorable="d"
+        Title="Registration" Height="768" Width="1366"
+         WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#1a1c28"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Button Name="btn_minimize"
+                Content="-"
+                Foreground="White"
+                FontSize="20"
+                FontFamily="Dosis SemiBold"
+                Cursor="Hand"
+                Grid.Column="0"
+                Height="30" Width="30"
+                Click="btn_minimize_Click"
+                Margin="1180,0,0,518" FontWeight="Medium"
+                >
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#1a1c28"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="30" Height="30"
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+
+        <Button Name="btn_close"
+                Content="X"
+                Foreground="White"
+                FontSize="13"
+                FontFamily="Dosis SemiBold"
+                Cursor="Hand"
+                Grid.Column="0"
+                Height="30" Width="30"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Click="btn_close_Click"
+                Margin="1250,0,0,518">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#1a1c28"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="30" Height="30"
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+
+
+        <Button  HorizontalAlignment="Left" Margin="446,321,0,0" VerticalAlignment="Top" Height="130" Width="165"
+            
+            FontSize="20" FontWeight="Bold" Cursor="Hand" Name="btn_birth" Click="btn_birth_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" 
+                        Value="#00ffff"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+
+                    <Border 
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Bottom"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+
+            </Button.Template>
+            <Button.Content>
+                <StackPanel Width="165">
+                    <Image Source="/image/mother.png" Height="70" Width="70"
+                           RenderTransformOrigin="0.469,0.534" VerticalAlignment="Top" HorizontalAlignment="Center"
+                           Margin="0,10,0,50"
+                           />
+                </StackPanel>
+            </Button.Content>
+
+        </Button>
+
+
+        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="REGISTRATION" VerticalAlignment="Top" 
+                   FontSize="25"
+                   Foreground="#ffffff" 
+                   RenderTransformOrigin="0.542,-1.441"
+                   />
+
+
+        <Button HorizontalAlignment="Left" Margin="748,322,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_death"
+                Click="btn_death_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" 
+                        Value="#00ffff"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+
+                    <Border 
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Bottom"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+
+            </Button.Template>
+            <Button.Content>
+                <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
+                    <Image Source="/image/tomb.png" Height="70" Width="50"
+                           RenderTransformOrigin="0.469,0.530"
+                           Margin="0,10,0,0"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+
+
+        <Button HorizontalAlignment="Left" Margin="446,493,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_marriage"
+                Click="btn_marriage_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" 
+                        Value="#00ffff"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+
+                    <Border 
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Bottom"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+
+            </Button.Template>
+            <Button.Content>
+                <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
+                    <Image Source="/image/wedding.png" Height="70" Width="60"
+                           RenderTransformOrigin="0.469,0.530"
+                           Margin="0,14,0,0"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+
+
+        <Button  HorizontalAlignment="Left" Margin="748,493,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_licence"
+                 Click="btn_licence_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" 
+                        Value="#00ffff"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+
+                    <Border 
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Bottom"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+
+            </Button.Template>
+            <Button.Content>
+                <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
+                    <Image Source="/image/license.png" Height="70" Width="60"
+                           RenderTransformOrigin="0.469,0.530"
+                           Margin="0,10,0,0"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="483,403,0,0" TextWrapping="Wrap" Text="BIRTH CERTIFICATE" VerticalAlignment="Top"
+                   FontSize="15" RenderTransformOrigin="0.389,0.479" Height="48" Width="93" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="776,403,0,0" TextWrapping="Wrap" Text="DEATH CERTIFICATE" VerticalAlignment="Top"
+            FontSize="15" RenderTransformOrigin="0.389,0.479" Height="36" Width="108" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="485,578,0,0" TextWrapping="Wrap" Text="MARRIAGE CERTIFICATE" VerticalAlignment="Top"
+            FontSize="15" RenderTransformOrigin="0.416,0.019" Height="40" Width="89" TextAlignment="Center" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="784,578,0,0" TextWrapping="Wrap" Text="DRIVE LICENCE" VerticalAlignment="Top"
+            FontSize="15" RenderTransformOrigin="0.389,0.479" Height="40" Width="94" TextAlignment="Center" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

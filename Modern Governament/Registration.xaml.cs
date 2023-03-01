@@ -15,26 +15,27 @@ using System.Windows.Shapes;
 namespace Modern_Governament
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for Registration.xaml
     /// </summary>
-    public partial class Home : Window
+    public partial class Registration : Window
     {
-        public Home()
+        public Registration()
         {
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
+
             if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }
-        }
-
-        private void btn_close_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
         }
 
         private void btn_minimize_Click(object sender, RoutedEventArgs e)
@@ -42,25 +43,29 @@ namespace Modern_Governament
             WindowState = WindowState.Minimized;
         }
 
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
 
-        private void btn_registration_Click(object sender, RoutedEventArgs e)
+        private void btn_birth_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            Registration r1= new Registration();
-            r1.Show();
+            BirthRegistration br1=new BirthRegistration();
+            br1.Show();
         }
 
-        private void btn_health_Click(object sender, RoutedEventArgs e)
+        private void btn_death_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btn_banking_Click(object sender, RoutedEventArgs e)
+        private void btn_marriage_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btn_report_Click(object sender, RoutedEventArgs e)
+        private void btn_licence_Click(object sender, RoutedEventArgs e)
         {
 
         }
