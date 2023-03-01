@@ -13,82 +13,9 @@
         MouseDown="Window_MouseDown"
         Loaded="Window_Loaded">
     <Grid>
-        <Button Name="btn_minimize"
-                Content="-"
-                Foreground="White"
-                FontSize="20"
-                FontFamily="Dosis SemiBold"
-                Cursor="Hand"
-                Grid.Column="0"
-                Height="30" Width="30"
-                Click="btn_minimize_Click"
-                Margin="1256,10,80,728" FontWeight="Medium" RenderTransformOrigin="0.517,-1.267"
-                >
+        
 
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="#1a1c28"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Width="30" Height="30"
-                                        CornerRadius="0"
-                                        Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
-
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-
-
-        </Button>
-
-        <Button Name="btn_close"
-                Content="X"
-                Foreground="White"
-                FontSize="13"
-                FontFamily="Dosis SemiBold"
-                Cursor="Hand"
-                Grid.Column="0"
-                Height="30" Width="30"
-                VerticalContentAlignment="Center"
-                HorizontalContentAlignment="Center"
-                Click="btn_close_Click"
-                Margin="1291,10,45,728">
-
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="#1a1c28"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Width="30" Height="30"
-                                        CornerRadius="0"
-                                        Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
-
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-
-
-        </Button>
-
-        <StackPanel Margin="0,0,1066,10" Background="#ffffff" >
+        <StackPanel Margin="0,0,1066,0" Background="#ffffff"  Name="cc">
             <Image Source="/image/mother.png"
                    Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center"
                    Margin="0,110,0,0" RenderTransformOrigin="0.46,0.9"/>
@@ -144,5 +71,15 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <StackPanel Margin="305,61,0,0" RenderTransformOrigin="0.511,0.466"
+                    Name="new_registration">
+            <TextBlock TextWrapping="Wrap" Text="New Registration" Height="55" Width="353" RenderTransformOrigin="0.499,0.511" FontSize="36" Foreground="White" TextAlignment="Center"/>
+
+            <TextBlock TextWrapping="Wrap" Text="Registration No" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" HorizontalAlignment="Left"
+                       Margin="80,40,0,0"/>
+            <TextBox Text="TextBox" Width="169" Height="24" RenderTransformOrigin="0.479,-1.083" TextChanged="TextBox_TextChanged" TextWrapping="Wrap"
+                     />
+
+        </StackPanel>
     </Grid>
 </Window>
