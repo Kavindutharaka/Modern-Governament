@@ -93,11 +93,17 @@ namespace Modern_Governament
         {
             DateTime reg_date;
             reg_date = DateTime.Now;
-
+            DateTime dob,mdob,fdob;
+            dob = Convert.ToDateTime(dob_picker.Text);
+            fdob= Convert.ToDateTime(mdob_picker.Text);
+            mdob = Convert.ToDateTime(fdob_picker.Text);
             con.Open();
-            cmd = new SqlCommand("Insert into BirthCertificate values('" + txt_reg_num.Text + "','" + txt_full_name.Text + "',@a,'" + txt_place_birth.Text + "','" + txt_dob.Text + "','" + txt_fname.Text + "','" + txt_f_dob.Text + "','" + txt_fname.Text + "','" + txt_f_dob.Text + "',@b)", con);
+            cmd = new SqlCommand("Insert into BirthCertificate values('"+txt_reg_num.Text+"','"+txt_full_name.Text+"',@a,'"+txt_place_birth.Text+"',@c,'"+txt_fname.Text+"',@d,'"+txt_mname.Text+"',@e,@b)", con);
             cmd.Parameters.AddWithValue("a", sex);
             cmd.Parameters.AddWithValue("b", reg_date);
+            cmd.Parameters.AddWithValue("c", dob);
+            cmd.Parameters.AddWithValue("d",fdob);
+            cmd.Parameters.AddWithValue("e", mdob);
             cmd.ExecuteNonQuery();
             con.Close();
         }

@@ -124,14 +124,6 @@
                     Padding="4"
                     BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBlock TextWrapping="Wrap" Text="Date of Birth" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="399" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBox x:Name="txt_dob"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="393" Background="Transparent"
-                    FontSize="16"
-                    FontWeight="Medium"
-                    Foreground="#ff008e"
-                    CaretBrush="White"
-                    BorderBrush="Cyan"
-                    Padding="4"
-                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBlock TextWrapping="Wrap" Text="Father" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="466" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBlock TextWrapping="Wrap" Text="Full Name" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="466" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <TextBlock TextWrapping="Wrap" Text="DOB" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="516" HorizontalAlignment="Center" VerticalAlignment="Top"/>
@@ -146,23 +138,7 @@
                     BorderBrush="Cyan"
                     Padding="4"
                     BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBox x:Name="txt_f_dob"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="510" Background="Transparent"
-                    FontSize="16"
-                    FontWeight="Medium"
-                    Foreground="#ff008e"
-                    CaretBrush="White"
-                    BorderBrush="Cyan"
-                    Padding="4"
-                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBox x:Name="txt_fname1"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="570" Background="Transparent"
-                    FontSize="16"
-                    FontWeight="Medium"
-                    Foreground="#ff008e"
-                    CaretBrush="White"
-                    BorderBrush="Cyan"
-                    Padding="4"
-                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBox x:Name="txt_f_dob1"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="624" Background="Transparent"
+                <TextBox x:Name="txt_mname"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="570" Background="Transparent"
                     FontSize="16"
                     FontWeight="Medium"
                     Foreground="#ff008e"
@@ -204,7 +180,47 @@
 
 
                 </Button>
+                <DatePicker x:Name="dob_picker" Canvas.Left="552" Canvas.Top="399" HorizontalAlignment="Left" VerticalAlignment="Center" Width="297" Height="28">
+                    <DatePicker.Style>
+                        <Style/>
+                    </DatePicker.Style>
+                    <DatePicker.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                            <GradientStop Color="#FFA3AEB9"/>
+                            <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                            <GradientStop Color="#FF718597" Offset="0.375"/>
+                            <GradientStop Color="#FF618384" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DatePicker.BorderBrush>
+                </DatePicker>
+                <DatePicker x:Name="fdob_picker" Canvas.Left="553" Canvas.Top="516" Width="297" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <DatePicker.Style>
+                        <Style/>
+                    </DatePicker.Style>
+                    <DatePicker.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                            <GradientStop Color="#FFA3AEB9"/>
+                            <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                            <GradientStop Color="#FF718597" Offset="0.375"/>
+                            <GradientStop Color="#FF618384" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DatePicker.BorderBrush>
+                </DatePicker>
+                <DatePicker x:Name="mdob_picker" Canvas.Left="553" Canvas.Top="630" Width="297" Height="28" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <DatePicker.Style>
+                        <Style/>
+                    </DatePicker.Style>
+                    <DatePicker.BorderBrush>
+                        <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                            <GradientStop Color="#FFA3AEB9"/>
+                            <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                            <GradientStop Color="#FF718597" Offset="0.375"/>
+                            <GradientStop Color="#FF618384" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DatePicker.BorderBrush>
+                </DatePicker>
             </Canvas>
+
 
 
         </StackPanel>
