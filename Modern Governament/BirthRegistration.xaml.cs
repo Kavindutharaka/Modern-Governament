@@ -34,7 +34,7 @@ namespace Modern_Governament
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-          NewRegistration n1= new NewRegistration();
+          cc.Content= new NewRegistration();
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
@@ -49,12 +49,12 @@ namespace Modern_Governament
 
         private void btn_new_registration_Click(object sender, RoutedEventArgs e)
         {
-
+            cc.Content = new NewRegistration();
         }
 
         private void btn_reg_update_Click(object sender, RoutedEventArgs e)
         {
-
+            cc.Content = new Update();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

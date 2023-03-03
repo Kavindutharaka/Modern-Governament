@@ -24,5 +24,20 @@ namespace Modern_Governament
         {
             InitializeComponent();
         }
+
+        private void btn_minimize_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void btn_update_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Modern_Governament"
              mc:Ignorable="d" 
              d:DesignHeight="768" d:DesignWidth="1066"
-             Background="#1a1c28">
+             Background="#1a1c28"
+             Loaded="UserControl_Loaded">
     <Grid>
         <Button Name="btn_minimize"
                 Content="-"
@@ -82,5 +83,130 @@
 
 
         </Button>
+        <StackPanel >
+            <Canvas>
+
+                <TextBlock TextWrapping="Wrap" Text="New Registration" Height="55" Width="353" RenderTransformOrigin="0.499,0.511" FontSize="36" Foreground="White" TextAlignment="Center" Canvas.Left="376" Canvas.Top="15"/>
+
+
+                <TextBox  Width="297" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="120" HorizontalAlignment="Center" Background="Transparent"
+                          FontSize="16"
+                               FontWeight="Medium"
+                               Foreground="#ff008e"
+                               CaretBrush="White"
+                             BorderBrush="Cyan"
+                        Padding="4" VerticalAlignment="Center"
+                          BorderThickness="2"
+                          Name="txt_reg_num"/>
+
+                <TextBlock TextWrapping="Wrap" Text="Registration No" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" HorizontalAlignment="Left" Canvas.Left="92" Canvas.Top="124"/>
+                <TextBlock TextWrapping="Wrap" Text="Full Name" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="207" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="297" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="201" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"
+                          Name="txt_full_name"/>
+                <TextBlock TextWrapping="Wrap" Text="Sex" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="274" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+                <RadioButton x:Name="rbn_male" Content="Male" Canvas.Left="400" Canvas.Top="274" Foreground="White" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Background="#FF03FFE2" Checked="rbn_male_Checked"/>
+                <RadioButton x:Name="rbn_female" Content="Female" Canvas.Left="630" Canvas.Top="274" Foreground="White" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Center" Checked="rbn_female_Checked"/>
+                <TextBlock TextWrapping="Wrap" Text="Place of Birth" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="340" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_place_birth"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="334" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Date of Birth" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="399" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox x:Name="txt_dob"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="393" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Father" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="466" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Full Name" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="466" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock TextWrapping="Wrap" Text="DOB" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="516" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Father" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="576" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Full Name" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="580" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="DOB" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="630" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_fname"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="460" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_f_dob"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="510" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_fname1"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="570" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox x:Name="txt_f_dob1"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="624" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Button  Name="btn_add"
+            Content="ADD"
+            Foreground="#1a1c28"
+            FontSize="23"
+           Cursor="Hand"
+            Grid.Row="1"
+            Height="100" Width="300"
+            FontFamily="Dosis bold"
+            Click="btn_add_Click_1" Canvas.Left="402" Canvas.Top="663" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   >
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#00ffff"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#ff008e"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="180" Height="50"
+                                        CornerRadius="10"
+                                        Background="{TemplateBinding Background}" Margin="60,25,60,22">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+
+                </Button>
+            </Canvas>
+
+
+        </StackPanel>
     </Grid>
 </UserControl>
