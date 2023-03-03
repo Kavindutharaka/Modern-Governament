@@ -1,5 +1,7 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +25,14 @@ namespace Modern_Governament
         {
             InitializeComponent();
         }
-
+        SqlConnection con;
+       
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            con = new SqlConnection("Data Source=DESKTOP-13KGUEB;Initial Catalog=Government;Integrated Security=True");
+           NewRegistration nr1= new NewRegistration();
+           
+          
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

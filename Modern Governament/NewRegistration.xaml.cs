@@ -39,18 +39,18 @@ namespace Modern_Governament
 
             if (dr.Read())
             {
-                int id = int.Parse(dr[0].ToString().Substring(1)) + 1;
-                proid = id.ToString("b00000000");
+                int id = int.Parse(dr[0].ToString().Substring(2)) + 1;
+                proid = id.ToString("BC000000");
             }
             else if (Convert.IsDBNull(dr))
             {
-                proid = ("b00000001");
+                proid = ("BC000001");
             }
             else
             {
-                proid = ("b00000001");
+                proid = ("BC000001");
             }
-            con.Close();
+                con.Close();
             txt_reg_num.Text = proid.ToString();
         }
         private void btn_minimize_Click(object sender, RoutedEventArgs e)
@@ -75,7 +75,7 @@ namespace Modern_Governament
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            con =new SqlConnection("Data Source=DESKTOP-13KGUEB;Initial Catalog=Government;Integrated Security=True");
+            con = new SqlConnection("Data Source=DESKTOP-13KGUEB;Initial Catalog=Government;Integrated Security=True");
             GetpublicId();
         }
 
@@ -93,17 +93,9 @@ namespace Modern_Governament
         {
             DateTime reg_date;
             reg_date = DateTime.Now;
-            DateTime dob,mdob,fdob;
-            dob = Convert.ToDateTime(dob_picker.Text);
-            fdob= Convert.ToDateTime(mdob_picker.Text);
-            mdob = Convert.ToDateTime(fdob_picker.Text);
             con.Open();
-            cmd = new SqlCommand("Insert into BirthCertificate values('"+txt_reg_num.Text+"','"+txt_full_name.Text+"',@a,'"+txt_place_birth.Text+"',@c,'"+txt_fname.Text+"',@d,'"+txt_mname.Text+"',@e,@b)", con);
-            cmd.Parameters.AddWithValue("a", sex);
+            cmd = new SqlCommand("Insert into BirthCertificate values('"+txt_reg_num.Text+"','"+txt_full_name.Text+"','"+sex+"','"+txt_place_birth.Text+"','"+dob_picker.SelectedDate+"','"+txt_fname.Text+"','"+fdob_picker.SelectedDate +"','"+txt_mname.Text+"','"+mdob_picker.SelectedDate + "',@b)", con);
             cmd.Parameters.AddWithValue("b", reg_date);
-            cmd.Parameters.AddWithValue("c", dob);
-            cmd.Parameters.AddWithValue("d",fdob);
-            cmd.Parameters.AddWithValue("e", mdob);
             cmd.ExecuteNonQuery();
             con.Close();
         }
