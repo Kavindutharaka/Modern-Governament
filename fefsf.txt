@@ -1,0 +1,20 @@
+            DateTime reg_date;
+            reg_date = DateTime.Now;
+            DateTime dob,mdob,fdob;
+            dob = Convert.ToDateTime(dob_picker.Text);
+            fdob= Convert.ToDateTime(mdob_picker.Text);
+            mdob = Convert.ToDateTime(fdob_picker.Text);
+
+
+
+
+
+
+
+
+
+         cmd.Parameters.AddWithValue("a", sex);
+            cmd.Parameters.AddWithValue("b", reg_date);
+            cmd.Parameters.AddWithValue("c", dob);
+            cmd.Parameters.AddWithValue("d",fdob);
+            cmd.Parameters.AddWithValue("e", mdob);

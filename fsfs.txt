@@ -1,0 +1,12 @@
+ dob = Convert.ToDateTime(dob_picker.Text);
+            fdob = Convert.ToDateTime(mdob_picker.Text);
+            mdob = Convert.ToDateTime(fdob_picker.Text);
+            con.Open();
+            cmd= new SqlCommand("update BirthCertificate set full_name='"+txt_full_name+ "',sex=@a,place_birth='"+txt_place_birth+ "',dob=@c,f_name='"+txt_fname+ "',f_dob=@d,m_name='"+txt_mname+ "',m_dob=@e,date_reg=@b", con);
+            cmd.Parameters.AddWithValue("a", sex);
+            cmd.Parameters.AddWithValue("b", reg_date);
+            cmd.Parameters.AddWithValue("c", dob);
+            cmd.Parameters.AddWithValue("d", fdob);
+            cmd.Parameters.AddWithValue("e", mdob);
+            cmd.ExecuteNonQuery();
+            con.Close();

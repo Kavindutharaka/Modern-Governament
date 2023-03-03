@@ -1,0 +1,2 @@
+Severity	Code	Description	Project	File	Line	Suppression State
+Error	CS1061	'DatePicker' does not contain a definition for 'value' and no accessible extension method 'value' accepting a first argument of type 'DatePicker' could be found (are you missing a using directive or an assembly reference?)	Modern Governament	E:\Vitual Studio Project\Modern Governament\Modern Governament\NewRegistration.xaml.cs	97	Active
