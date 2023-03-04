@@ -109,6 +109,7 @@ namespace Modern_Governament
             pr1.lbl_fdob.Text= fdob_picker.Text;
             pr1.lbl_mfname.Text= txt_mname.Text;
             pr1.lbl_mdob.Text = mdob_picker.Text;
+            pr1.lbl_regdate.Text = reg_date.ToString();
             
             PrintDialog printDlg = new PrintDialog();
             if (printDlg.ShowDialog() == true)
