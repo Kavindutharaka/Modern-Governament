@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Modern_Governament.PrintReg"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Modern_Governament"
+             mc:Ignorable="d" 
+             d:DesignHeight="3508" d:DesignWidth="2480"
+             Background="White"
+             Loaded="UserControl_Loaded">
+    <Grid>
+        <Canvas Margin="0,10,0,-10" Name="printregistration">
+            <Image Source="/image/Logo.png" Height="502" Width="396" Canvas.Left="1042" Canvas.Top="60"/>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Width="1084" Canvas.Left="698" Canvas.Top="652" Height="145" Text="Birth Certificate" FontSize="120" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Width="732" Canvas.Left="362" Canvas.Top="979" Height="103" Text="Registor Number" FontSize="60"/>
+            <TextBlock Width="732" Canvas.Left="362" Canvas.Top="1207" Height="103" Text="Full Name" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="362" Canvas.Top="1417" Height="103" Text="Sex" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="362" Canvas.Top="1657" Height="103" Text="Place of Birth" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="362" Canvas.Top="1928" Height="103" Text="Date of Birth" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="362" Canvas.Top="2208" Height="103" Text="Father" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="823" Canvas.Top="2213" Height="103" Text="Full Name" FontSize="55" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="823" Canvas.Top="2369" Height="103" Text="Date Of Birth" FontSize="55" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="362" Canvas.Top="2682" Height="103" Text="Mother" FontSize="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="823" Canvas.Top="2630" Height="103" Text="Full Name" FontSize="55" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="823" Canvas.Top="2790" Height="103" Text="Date Of Birth" FontSize="55" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock Width="732" Canvas.Left="1748" Canvas.Top="3248" Height="103" Text="Date of Registration" FontSize="55" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_reg" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="1031" Height="50" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_fname" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="1245" Height="50" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_sex" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="1453" Height="51" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_pob" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="1667" Height="50" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_dob" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="1937" Height="50" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_ffname" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="2220" Height="49" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_fdob" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="2375" Height="49" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_mfname" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="2659" Height="50" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_mdob" Canvas.Left="1485" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="2818" Height="50" Width="524" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lbl_regdate" Canvas.Left="1838" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="3128" Height="50" Width="524" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </Canvas>
+    </Grid>
+</UserControl>

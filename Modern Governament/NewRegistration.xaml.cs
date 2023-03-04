@@ -98,6 +98,24 @@ namespace Modern_Governament
             cmd.Parameters.AddWithValue("b", reg_date);
             cmd.ExecuteNonQuery();
             con.Close();
+
+            PrintReg pr1=new PrintReg();
+            pr1.lbl_reg.Text = txt_reg_num.Text;
+            pr1.lbl_fname.Text = txt_full_name.Text;
+            pr1.lbl_sex.Text = sex;
+            pr1.lbl_pob.Text = txt_place_birth.Text;
+            pr1.lbl_dob.Text = dob_picker.Text;
+            pr1.lbl_ffname.Text=txt_fname.Text;
+            pr1.lbl_fdob.Text= fdob_picker.Text;
+            pr1.lbl_mfname.Text= txt_mname.Text;
+            pr1.lbl_mdob.Text = mdob_picker.Text;
+            
+            PrintDialog printDlg = new PrintDialog();
+            if (printDlg.ShowDialog() == true)
+            {
+                printDlg.PrintVisual(pr1,"User Control Printing.");
+            }
+
         }
     }
 }
