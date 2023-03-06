@@ -1,0 +1,285 @@
+﻿<UserControl x:Class="Modern_Governament.MarriageRegister"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Modern_Governament"
+             mc:Ignorable="d" 
+              d:DesignHeight="768" d:DesignWidth="1066"
+             Background="#1a1c28"
+             Loaded="UserControl_Loaded">
+    <Grid>
+        <Button Name="btn_minimize"
+                Content="-"
+                Foreground="White"
+                FontSize="20"
+                FontFamily="Dosis SemiBold"
+                Cursor="Hand"
+                Grid.Column="0"
+                Height="30" Width="30"
+                Click="btn_minimize_Click"
+                Margin="953,19,83,719" FontWeight="Medium" RenderTransformOrigin="0.517,-1.267"
+                >
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#1a1c28"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="30" Height="30"
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+
+        <Button Name="btn_close"
+                Content="X"
+                Foreground="White"
+                FontSize="13"
+                FontFamily="Dosis SemiBold"
+                Cursor="Hand"
+                Grid.Column="0"
+                Height="30" Width="30"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Click="btn_close_Click"
+                Margin="988,19,48,719" RenderTransformOrigin="0.567,0.533">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#1a1c28"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="30" Height="30"
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+        <StackPanel >
+            <Canvas>
+
+                <TextBlock TextWrapping="Wrap" Text="New Registration" Height="55" Width="353" RenderTransformOrigin="0.499,0.511" FontSize="36" Foreground="White" TextAlignment="Center" Canvas.Left="376" Canvas.Top="15"/>
+
+
+                <TextBox  Width="297" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="120" HorizontalAlignment="Center" Background="Transparent"
+                          FontSize="16"
+                               FontWeight="Medium"
+                               Foreground="#ff008e"
+                               CaretBrush="White"
+                             BorderBrush="Cyan"
+                        Padding="4" VerticalAlignment="Center"
+                          BorderThickness="2"
+                          Name="txt_reg_num"/>
+
+                <TextBlock TextWrapping="Wrap" Text="Registration No" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" HorizontalAlignment="Left" Canvas.Left="92" Canvas.Top="124"/>
+                <TextBlock TextWrapping="Wrap" Text="Date of Marriage" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="180" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox  Width="297" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="174" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="1st Party" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="459" Canvas.Top="237" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="2nd Party" Height="28" Width="186" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="800" Canvas.Top="237" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock TextWrapping="Wrap" Text="Full Name" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="286" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="297" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="349" Canvas.Top="280" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="700" Canvas.Top="280" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock TextWrapping="Wrap" Text="NIC" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="337" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="297" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="349" Canvas.Top="331" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy3" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="700" Canvas.Top="331" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy4" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Date Of Birthday" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="388" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="296" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="350" Canvas.Top="382" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy5" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="700" Canvas.Top="382" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy6" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Address" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="438" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="296" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="350" Canvas.Top="432" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy7" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="700" Canvas.Top="432" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy8" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Father's Name" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="489" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Mother's Name" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="538" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Name of Witness" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="589" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="296" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="350" Canvas.Top="483" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy9" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="700" Canvas.Top="483" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy10" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="296" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="350" Canvas.Top="532" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy11" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="700" Canvas.Top="532" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy12" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="296" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="350" Canvas.Top="583" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy13" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="700" Canvas.Top="583" Background="Transparent"
+                    FontSize="16"
+                    FontWeight="Medium"
+                    Foreground="#ff008e"
+                    CaretBrush="White"
+                    BorderBrush="Cyan"
+                    Padding="4"
+                    BorderThickness="2"
+                    x:Name="txt_reg_num_Copy14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Button  x:Name="btn_add"
+                Content="ADD"
+                Foreground="#1a1c28"
+                FontSize="23"
+                Cursor="Hand"
+                Height="100" Width="300"
+                FontFamily="Dosis bold"
+                Click="btn_add_Click" Canvas.Left="402" Canvas.Top="654"
+                   >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#00ffff"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#ff008e"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="180" Height="50"
+                            CornerRadius="10"
+                            Background="{TemplateBinding Background}" Margin="60,25,60,22">
+                                <ContentPresenter VerticalAlignment="Center"
+                                HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+
+                </Button>
+            </Canvas>
+      
+        </StackPanel>
+    </Grid>
+</UserControl>

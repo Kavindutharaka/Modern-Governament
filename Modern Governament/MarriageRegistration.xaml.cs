@@ -46,17 +46,17 @@ namespace Modern_Governament
 
         private void btn_registration_Click(object sender, RoutedEventArgs e)
         {
-
+            cc.Content= new MarriageRegister();
         }
 
         private void btn_update_Click(object sender, RoutedEventArgs e)
         {
-
+            cc.Content= new MarriageUpdate();
         }
 
         private void btn_delete_Click(object sender, RoutedEventArgs e)
         {
-
+            cc.Content= new MarriageDelete();
         }
     }
 }

@@ -68,7 +68,9 @@ namespace Modern_Governament
 
         private void btn_marriage_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
+            MarriageRegistration mr1=new MarriageRegistration();
+            mr1.Show();
         }
 
         private void btn_licence_Click(object sender, RoutedEventArgs e)

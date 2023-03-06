@@ -18,9 +18,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border BorderBrush="Cyan" BorderThickness="0,0,0,5">
-            <Grid>
-                <!-- Grid contents here -->
-            </Grid>
+            
         </Border>
         <Button Name="btn_minimize"
                 Content="-"

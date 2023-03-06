@@ -66,8 +66,17 @@
     <Compile Include="DriveLicence.xaml.cs">
       <DependentUpon>DriveLicence.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MarriageDelete.xaml.cs">
+      <DependentUpon>MarriageDelete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MarriageRegister.xaml.cs">
+      <DependentUpon>MarriageRegister.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MarriageRegistration.xaml.cs">
       <DependentUpon>MarriageRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MarriageUpdate.xaml.cs">
+      <DependentUpon>MarriageUpdate.xaml</DependentUpon>
     </Compile>
     <Compile Include="NewRegistration.xaml.cs">
       <DependentUpon>NewRegistration.xaml</DependentUpon>
@@ -119,7 +128,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MarriageDelete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MarriageRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MarriageRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MarriageUpdate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
