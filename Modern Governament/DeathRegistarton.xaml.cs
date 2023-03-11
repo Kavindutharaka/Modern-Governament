@@ -26,7 +26,7 @@ namespace Modern_Governament
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            cc.Content = new Deathreg();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -36,7 +36,7 @@ namespace Modern_Governament
 
         private void btn_new_registration_Click(object sender, RoutedEventArgs e)
         {
-
+            cc.Content = new Deathreg();
         }
     }
 }

@@ -36,12 +36,15 @@ namespace Modern_Governament
 
         private void Window_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
-
+            if(e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-
+            cc.Content = new MarriageRegister();
         }
 
         private void btn_registration_Click(object sender, RoutedEventArgs e)

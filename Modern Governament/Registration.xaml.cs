@@ -63,7 +63,9 @@ namespace Modern_Governament
 
         private void btn_death_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
+            DeathRegistarton dr1=new DeathRegistarton();
+            dr1.Show();
         }
 
         private void btn_marriage_Click(object sender, RoutedEventArgs e)
@@ -75,7 +77,9 @@ namespace Modern_Governament
 
         private void btn_licence_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
+            DriveLicence dl1=new DriveLicence();
+            dl1.Show();
         }
     }
 }

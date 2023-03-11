@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,32 +16,48 @@ using System.Windows.Shapes;
 namespace Modern_Governament
 {
     /// <summary>
-    /// Interaction logic for MarriageDelete.xaml
+    /// Interaction logic for Drivereg.xaml
     /// </summary>
-    public partial class MarriageDelete : UserControl
+    public partial class Drivereg : UserControl
     {
-        public MarriageDelete()
+        public Drivereg()
         {
             InitializeComponent();
         }
-        SqlConnection con;
-        SqlCommand cmd;
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            con = new SqlConnection("Data Source=DESKTOP-13KGUEB;Initial Catalog=Government;Integrated Security=True");
+
         }
 
-        private void btn_delete_Click(object sender, RoutedEventArgs e)
+        private void rbn_new_Checked(object sender, RoutedEventArgs e)
         {
-            con.Open();
-            cmd = new SqlCommand("Delete from MarriageCertificate Where reg_num='" + txt_reg_num.Text + "'", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+
+        }
+
+        private void rbn_extend_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rbn_male_Copy_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void rbn_female_Copy_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_add_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void btn_close_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+
         }
     }
 }

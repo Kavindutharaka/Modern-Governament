@@ -31,12 +31,12 @@ namespace Modern_Governament
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            cc.Content = new Drivereg();
         }
 
         private void btn_registration_Click(object sender, RoutedEventArgs e)
         {
-
+            cc.Content = new Drivereg();
         }
 
         private void btn_reg_update_Click(object sender, RoutedEventArgs e)

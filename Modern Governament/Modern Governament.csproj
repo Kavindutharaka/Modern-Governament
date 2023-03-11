@@ -60,11 +60,17 @@
     <Compile Include="BirthRegistration.xaml.cs">
       <DependentUpon>BirthRegistration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Deathreg.xaml.cs">
+      <DependentUpon>Deathreg.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DeathRegistarton.xaml.cs">
       <DependentUpon>DeathRegistarton.xaml</DependentUpon>
     </Compile>
     <Compile Include="DriveLicence.xaml.cs">
       <DependentUpon>DriveLicence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Drivereg.xaml.cs">
+      <DependentUpon>Drivereg.xaml</DependentUpon>
     </Compile>
     <Compile Include="MarriageDelete.xaml.cs">
       <DependentUpon>MarriageDelete.xaml</DependentUpon>
@@ -94,11 +100,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Deathreg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DeathRegistarton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DriveLicence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Drivereg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

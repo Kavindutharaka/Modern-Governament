@@ -94,7 +94,7 @@
         </Button>
         <StackPanel>
             <Canvas>
-                <TextBlock TextWrapping="Wrap" Text="Enter Registration num of birth Certificate to be a Updated" Height="33" Width="592" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Enter Registration num of Marriage Certificate to be a Updated" Height="33" Width="592" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBlock TextWrapping="Wrap" Text="Update" Height="55" Width="353" RenderTransformOrigin="0.499,0.511" FontSize="36" Foreground="White" TextAlignment="Center" Canvas.Left="376" Canvas.Top="15"/>
 
 
@@ -111,15 +111,6 @@
             </Canvas>
         </StackPanel>
         <TextBlock TextWrapping="Wrap" Text="Date of Marriage" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="94,16,786,544" Grid.Row="1"/>
-        <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
-            FontSize="16"
-            FontWeight="Medium"
-            Foreground="#ff008e"
-            CaretBrush="White"
-            BorderBrush="Cyan"
-            Padding="4"
-            BorderThickness="2"
-            x:Name="txt_reg_num_Copy" Margin="554,10,216,544" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="1st Party" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="459,57,420,503" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="2nd Party" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="800,57,80,503" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="Full Name" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,106,787,454" Grid.Row="1"/>
@@ -131,7 +122,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy1" Margin="349,100,420,454" Grid.Row="1"/>
+            x:Name="txt_fp_fname" Margin="349,100,420,454" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -140,7 +131,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy2" Margin="700,100,68,454" Grid.Row="1"/>
+            x:Name="txt_sp_fname" Margin="700,100,68,454" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="NIC" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,157,787,403" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
@@ -150,7 +141,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy3" Margin="349,151,420,403" Grid.Row="1"/>
+            x:Name="txt_fp_nic" Margin="349,151,420,403" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -159,26 +150,8 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy4" Margin="700,151,68,403" Grid.Row="1"/>
+            x:Name="txt_sp_nic" Margin="700,151,68,403" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="Date Of Birthday" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,208,787,352" Grid.Row="1"/>
-        <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
-            FontSize="16"
-            FontWeight="Medium"
-            Foreground="#ff008e"
-            CaretBrush="White"
-            BorderBrush="Cyan"
-            Padding="4"
-            BorderThickness="2"
-            x:Name="txt_reg_num_Copy5" Margin="350,202,420,352" Grid.Row="1"/>
-        <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
-            FontSize="16"
-            FontWeight="Medium"
-            Foreground="#ff008e"
-            CaretBrush="White"
-            BorderBrush="Cyan"
-            Padding="4"
-            BorderThickness="2"
-            x:Name="txt_reg_num_Copy6" Margin="700,202,68,352" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="Address" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,258,787,302" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
@@ -188,7 +161,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy7" Margin="350,252,420,302" Grid.Row="1"/>
+            x:Name="txt_fp_address" Margin="350,252,420,302" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -197,7 +170,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy8" Margin="700,252,68,302" Grid.Row="1"/>
+            x:Name="txt_sp_address" Margin="700,252,68,302" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="Father's Name" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,309,787,251" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="Mother's Name" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,358,787,202" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="Name of Witness" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,409,787,151" Grid.Row="1"/>
@@ -209,7 +182,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy9" Margin="350,303,420,251" Grid.Row="1"/>
+            x:Name="txt_fp_faname" Margin="350,303,420,251" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -218,7 +191,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy10" Margin="700,303,68,251" Grid.Row="1"/>
+            x:Name="txt_sp_faname" Margin="700,303,68,251" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -227,7 +200,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy11" Margin="350,352,420,202" Grid.Row="1"/>
+            x:Name="txt_fp_moname" Margin="350,352,420,202" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -236,7 +209,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy12" Margin="700,352,68,202" Grid.Row="1"/>
+            x:Name="txt_sp_moname" Margin="700,352,68,202" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -245,7 +218,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy13" Margin="350,403,420,151" Grid.Row="1"/>
+            x:Name="txt_fp_witness" Margin="350,403,420,151" Grid.Row="1"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -254,7 +227,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num_Copy14" Margin="700,403,68,151" Grid.Row="1"/>
+            x:Name="txt_sp_witness" Margin="700,403,68,151" Grid.Row="1"/>
         <Button  x:Name="btn_update"
             Content="UPDATE"
             Foreground="#1a1c28"
@@ -287,5 +260,8 @@
 
 
         </Button>
+        <DatePicker x:Name="dom_picker" Margin="552,0,196,560" Grid.Row="1"/>
+        <DatePicker x:Name="fp_dob_picker" Margin="350,208,398,352" Grid.Row="1"/>
+        <DatePicker x:Name="sp_dob_picker" Margin="700,204,48,356" Grid.Row="1"/>
     </Grid>
 </UserControl>
