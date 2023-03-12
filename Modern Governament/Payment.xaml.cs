@@ -57,7 +57,19 @@ namespace Modern_Governament
             amount = Int32.Parse(txt_amount.Text);
             secpay s1= new secpay();
             pay p1= new pay();
-            p1.billTotal = Int32.Parse(txt_amount.Text)+ Int32.Parse(txt_amount1.Text)+ Int32.Parse(txt_amount2.Text);
+            if(txt_amount1.Text.Length==0 && txt_amount2.Text.Length==0)
+            {
+                p1.billTotal = Int32.Parse(txt_amount.Text);
+            }
+            else if(txt_amount2.Text.Length==0)
+            {
+                p1.billTotal = Int32.Parse(txt_amount.Text) + Int32.Parse(txt_amount1.Text);
+            }
+            else
+            {
+                p1.billTotal = Int32.Parse(txt_amount.Text) + Int32.Parse(txt_amount1.Text) + Int32.Parse(txt_amount2.Text);
+            }
+          
             p1.Show();
         }
 

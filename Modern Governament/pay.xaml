@@ -13,13 +13,12 @@
         MouseDown="Window_MouseDown"
         Loaded="Window_Loaded">
     <Grid>
-        <TextBlock TextWrapping="Wrap" Text="Bill Type" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="84,244,643,497"/>
-        <ComboBox Margin="454,238,40,502">
-            <ComboBoxItem Content = "Water Bill" />
-            <ComboBoxItem Content = "Electricity" />
-            <ComboBoxItem Content = "Telecomunication" />
+        <TextBlock TextWrapping="Wrap" Text="Payment Method" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="84,244,545,497"/>
+        <ComboBox x:Name="cmb_paymethod" Margin="454,238,40,502" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content = "Cash" />
+            <ComboBoxItem Content = "Credit Card" />
         </ComboBox>
-        <TextBlock TextWrapping="Wrap" Text="Bill Type" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="84,142,643,599"/>
+        <TextBlock TextWrapping="Wrap" Text="Bill Total" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="84,142,630,599"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
             FontWeight="Medium"
@@ -29,6 +28,101 @@
             Padding="4"
             BorderThickness="2"
             x:Name="txt_total" Margin="454,136,40,599"/>
+        <Button  x:Name="btn_cancel"
+            Content="Cancel"
+            Foreground="#1a1c28"
+            FontSize="18"
+            Cursor="Hand"
+            FontFamily="Dosis bold"
+            Click="btn_cancel_Click" 
+    Margin="-101,691,-515,10">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#00ffff"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="150" Height="40"
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}" Margin="633,27,633,0" >
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+        <Button  x:Name="btn_pay"
+            Content="Pay"
+            Foreground="#1a1c28"
+            FontSize="23"
+            Cursor="Hand"
+            FontFamily="Dosis bold"
+            Click="btn_pay_Click"
+    Margin="100,692,430,-10" 
+                   >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#00ffff"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="150" Height="40"
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}" Margin="60,25,60,22">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+        <TextBlock x:Name="lbl_card" TextWrapping="Wrap" Text="Card number" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="84,456,587,285"/>
+        <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
+            FontSize="16"
+            FontWeight="Medium"
+            Foreground="#ff008e"
+            CaretBrush="White"
+            BorderBrush="Cyan"
+            Padding="4"
+            BorderThickness="2"
+            x:Name="txt_cardnum" Margin="454,450,40,285"/>
+        <TextBlock x:Name="lbl_exp" TextWrapping="Wrap" Text="Expiry" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="176,524,506,217"/>
+        <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
+            FontSize="16"
+            FontWeight="Medium"
+            Foreground="#ff008e"
+            CaretBrush="White"
+            BorderBrush="Cyan"
+            Padding="4"
+            BorderThickness="2"
+            x:Name="txt_exp" Margin="177,582,507,153"/>
+        <TextBlock x:Name="lbl_cvc" TextWrapping="Wrap" Text="CVC" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="550,524,176,217"/>
+        <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
+            FontSize="16"
+            FontWeight="Medium"
+            Foreground="#ff008e"
+            CaretBrush="White"
+            BorderBrush="Cyan"
+            Padding="4"
+            BorderThickness="2"
+            x:Name="txt_cvc" Margin="529,582,155,153"/>
 
     </Grid>
 </Window>

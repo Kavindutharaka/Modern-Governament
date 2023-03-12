@@ -78,6 +78,9 @@
     <Compile Include="imgpre.xaml.cs">
       <DependentUpon>imgpre.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Loan.xaml.cs">
+      <DependentUpon>Loan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MarriageDelete.xaml.cs">
       <DependentUpon>MarriageDelete.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="imgpre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Loan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
