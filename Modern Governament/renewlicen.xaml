@@ -58,9 +58,9 @@
         <TextBlock TextWrapping="Wrap" Text="Licen No" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="94,266,833,474"/>
         <TextBlock TextWrapping="Wrap" Text="Extend" RenderTransformOrigin="0.499,0.511" FontSize="36" Foreground="White" TextAlignment="Center" Margin="376,15,337,698"/>
         <TextBlock TextWrapping="Wrap" Text="Medical Report" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="94,450,833,290"/>
-        <ComboBox x:Name="cmb_medicalreport" HorizontalAlignment="Left" Margin="552,441,0,0" VerticalAlignment="Top" Width="282" Height="37">
-            <ComboBoxItem Content = "Yes" />
-            <ComboBoxItem Content = "no" />
+        <ComboBox x:Name="cmb_medicalreport" HorizontalAlignment="Left" Margin="552,441,0,0" VerticalAlignment="Top" Width="282" Height="37" SelectionChanged="cmb_medicalreport_SelectionChanged">
+            <ComboBoxItem Content = "Pass" />
+            <ComboBoxItem Content = "Fail" />
         </ComboBox>
         <TextBlock TextWrapping="Wrap" Text="Medical Report" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="94,373,833,367"/>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"

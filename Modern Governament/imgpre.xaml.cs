@@ -36,12 +36,15 @@ namespace Modern_Governament
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
 
         private void btn_cancel_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
+            Hide();  
         }
     }
 }
