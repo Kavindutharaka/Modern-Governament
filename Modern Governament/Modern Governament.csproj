@@ -75,6 +75,9 @@
     <Compile Include="Drivereg.xaml.cs">
       <DependentUpon>Drivereg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="imgpre.xaml.cs">
+      <DependentUpon>imgpre.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MarriageDelete.xaml.cs">
       <DependentUpon>MarriageDelete.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,9 @@
     </Compile>
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="renewlicen.xaml.cs">
+      <DependentUpon>renewlicen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Update.xaml.cs">
       <DependentUpon>Update.xaml</DependentUpon>
@@ -124,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="imgpre.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,6 +184,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="renewlicen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -15,13 +15,23 @@ using System.Windows.Shapes;
 namespace Modern_Governament
 {
     /// <summary>
-    /// Interaction logic for DriveLicence.xaml
+    /// Interaction logic for imgpre.xaml
     /// </summary>
-    public partial class DriveLicence : Window
+    public partial class imgpre : Window
     {
-        public DriveLicence()
+        public imgpre()
         {
             InitializeComponent();
+        }
+        public string img1;
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            img_medical.Source = new BitmapImage(new Uri(img1));
+        }
+
+        private void btn_ok_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -29,24 +39,9 @@ namespace Modern_Governament
 
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            cc.Content = new Drivereg();
-        }
-
-        private void btn_registration_Click(object sender, RoutedEventArgs e)
-        {
-            cc.Content = new Drivereg();
-        }
-
-        private void btn_reg_update_Click(object sender, RoutedEventArgs e)
+        private void btn_cancel_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void btn_extend_Click(object sender, RoutedEventArgs e)
-        {
-            cc.Content = new renewlicen();
         }
     }
 }
