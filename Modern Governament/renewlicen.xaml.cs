@@ -44,8 +44,9 @@ namespace Modern_Governament
 
                 txt_medicalreport.Text = openFileDlg.FileName;
                 // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
-                // imgpre i1=new imgpre();
-                //i1.img1 = txt_medicalreport.Text;
+                 imgpre i1=new imgpre();
+                i1.img1 = txt_medicalreport.Text;
+                i1.Show();
             }
         }
 

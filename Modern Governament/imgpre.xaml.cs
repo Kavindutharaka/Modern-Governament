@@ -31,7 +31,7 @@ namespace Modern_Governament
 
         private void btn_ok_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -41,7 +41,7 @@ namespace Modern_Governament
 
         private void btn_cancel_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
         }
     }
 }
