@@ -39,29 +39,11 @@ namespace Modern_Governament
 
         }
 
-        private void btn_registration_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_withdraw_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_deposite_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btn_report_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btn_payment_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
+            Payment p1= new Payment();
+            p1.Show();
         }
 
         private void btn_loan_Click(object sender, RoutedEventArgs e)

@@ -93,6 +93,12 @@
     <Compile Include="NewRegistration.xaml.cs">
       <DependentUpon>NewRegistration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pay.xaml.cs">
+      <DependentUpon>pay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.xaml.cs">
+      <DependentUpon>Payment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrintReg.xaml.cs">
       <DependentUpon>PrintReg.xaml</DependentUpon>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <Compile Include="renewlicen.xaml.cs">
       <DependentUpon>renewlicen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="secpay.xaml.cs">
+      <DependentUpon>secpay.xaml</DependentUpon>
     </Compile>
     <Compile Include="Update.xaml.cs">
       <DependentUpon>Update.xaml</DependentUpon>
@@ -179,6 +188,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Payment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PrintReg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -188,6 +205,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="renewlicen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="secpay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

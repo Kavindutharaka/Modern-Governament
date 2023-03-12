@@ -57,7 +57,9 @@ namespace Modern_Governament
 
         private void btn_banking_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
+            Banking b1= new Banking();  
+            b1.Show();
         }
 
         private void btn_report_Click(object sender, RoutedEventArgs e)
