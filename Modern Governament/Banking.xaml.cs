@@ -58,5 +58,15 @@ namespace Modern_Governament
         {
 
         }
+
+        private void btn_payment_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_loan_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -265,5 +265,11 @@
       <Version>2.8.5</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\previous-cyan.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

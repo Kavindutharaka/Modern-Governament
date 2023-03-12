@@ -87,7 +87,7 @@
 
         </Button>
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="Home" VerticalAlignment="Top" 
+        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="Banking" VerticalAlignment="Top" 
                    FontSize="25"
                    Foreground="#ffffff" 
                    RenderTransformOrigin="0.542,-1.441"
@@ -95,7 +95,7 @@
 
         <Button  HorizontalAlignment="Left" Margin="446,321,0,0" VerticalAlignment="Top" Height="130" Width="165"
             
-            FontSize="20" FontWeight="Bold" Cursor="Hand" Name="btn_registration" Click="btn_registration_Click">
+            FontSize="20" FontWeight="Bold" Cursor="Hand" Name="btn_payment" Click="btn_payment_Click">
 
             <Button.Style>
                 <Style TargetType="Button">
@@ -128,8 +128,8 @@
                            Margin="10,10,0,50"
                            />
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Create account" VerticalAlignment="Top"
-                   FontSize="20" RenderTransformOrigin="0.389,0.479" Canvas.Left="11" Canvas.Top="-49"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Top"
+                   FontSize="20" RenderTransformOrigin="0.389,0.479" Canvas.Left="39" Canvas.Top="-48" TextAlignment="Center"/>
                     </Canvas>
                 </StackPanel>
             </Button.Content>
@@ -137,8 +137,8 @@
         </Button>
 
 
-        <Button HorizontalAlignment="Left" Margin="748,322,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_deposite"
-                Click="btn_deposite_Click">
+        <Button HorizontalAlignment="Left" Margin="748,322,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_loan"
+                Click="btn_loan_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" 
@@ -169,89 +169,8 @@
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,10,0,0"/>
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Deposite" VerticalAlignment="Top"
-            FontSize="20" RenderTransformOrigin="0.389,0.479" FontWeight="Bold" Canvas.Left="44"/>
-                    </Canvas>
-                </StackPanel>
-            </Button.Content>
-        </Button>
-
-
-
-        <Button HorizontalAlignment="Left" Margin="446,493,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_withdraw"
-                Click="btn_withdraw_Click">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" 
-                        Value="#00ffff"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-
-                    <Border 
-                                        CornerRadius="0"
-                                        Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Bottom"
-                                                      HorizontalAlignment="Center"/>
-
-                    </Border>
-                </ControlTemplate>
-
-            </Button.Template>
-            <Button.Content>
-                <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
-                    <Image Source="/image/bank.png" Height="74" Width="78"
-                           RenderTransformOrigin="0.469,0.530"
-                           Margin="0,14,0,0"/>
-                    <Canvas>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Withdraw" VerticalAlignment="Top"
-            FontSize="20" RenderTransformOrigin="0.389,0.479" FontWeight="Bold" Canvas.Left="35"/>
-                    </Canvas>
-                </StackPanel>
-            </Button.Content>
-        </Button>
-
-
-        <Button  HorizontalAlignment="Left" Margin="748,493,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_report"
-                 Click="btn_report_Click">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" 
-                        Value="#00ffff"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-
-                    <Border 
-                                        CornerRadius="0"
-                                        Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Bottom"
-                                                      HorizontalAlignment="Center"/>
-
-                    </Border>
-                </ControlTemplate>
-
-            </Button.Template>
-            <Button.Content>
-                <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
-                    <Image Source="/image/report.png" Height="82" Width="80"
-                           RenderTransformOrigin="0.469,0.530"
-                           Margin="0,10,0,0"/>
-                    <Canvas>
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="REPORTS" VerticalAlignment="Center"
-            FontSize="20" RenderTransformOrigin="0.389,0.479" Canvas.Left="42" FontWeight="Bold"/>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Loan" VerticalAlignment="Center"
+            FontSize="20" RenderTransformOrigin="0.389,0.479" FontWeight="Bold" Canvas.Left="60"/>
                     </Canvas>
                 </StackPanel>
             </Button.Content>

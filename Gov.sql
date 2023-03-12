@@ -23,8 +23,11 @@ drop table driverlicen;
 create table driverlicenUpdate(Licen_no varchar(10),M_report varchar(5),m_report_path varchar(255), 
 foreign key(Licen_no) references driverlicen(reg_num));
 select * from driverlicenUpdate;
+alter table driverlicenUpdate add update_date date;
+alter table driverlicenUpdate add exp_date date;
 SELECT reg_num,nic,fname,dob,sex,age,tp,height,blood_group,regdate,expdate,M_report,m_report_path  
 FROM driverlicen  
 JOIN driverlicenUpdate  
 ON driverlicen .reg_num = driverlicenUpdate.Licen_no;
+insert into driverlicen values('DL000001',);
  

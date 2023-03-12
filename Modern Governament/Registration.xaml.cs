@@ -81,5 +81,12 @@ namespace Modern_Governament
             DriveLicence dl1=new DriveLicence();
             dl1.Show();
         }
+
+        private void btn_back_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            Home h1=new Home();
+            h1.Show();
+        }
     }
 }
