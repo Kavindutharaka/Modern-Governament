@@ -1,12 +1,12 @@
-﻿<Window x:Class="Modern_Governament.Home"
+﻿<Window x:Class="Modern_Governament.Banking"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Modern_Governament"
         mc:Ignorable="d"
-        Title="Home" Height="768" Width="1366"
-         WindowStyle="None"
+        Title="Banking" Height="768" Width="1366"
+        WindowStyle="None"
         ResizeMode="NoResize"
         Background="#1a1c28"
         WindowStartupLocation="CenterScreen"
@@ -87,6 +87,11 @@
 
         </Button>
 
+        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="Home" VerticalAlignment="Top" 
+                   FontSize="25"
+                   Foreground="#ffffff" 
+                   RenderTransformOrigin="0.542,-1.441"
+                   />
 
         <Button  HorizontalAlignment="Left" Margin="446,321,0,0" VerticalAlignment="Top" Height="130" Width="165"
             
@@ -123,7 +128,7 @@
                            Margin="10,10,0,50"
                            />
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="REGISTRATION" VerticalAlignment="Top"
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Create account" VerticalAlignment="Top"
                    FontSize="20" RenderTransformOrigin="0.389,0.479" Canvas.Left="11" Canvas.Top="-49"/>
                     </Canvas>
                 </StackPanel>
@@ -132,15 +137,8 @@
         </Button>
 
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="Home" VerticalAlignment="Top" 
-                   FontSize="25"
-                   Foreground="#ffffff" 
-                   RenderTransformOrigin="0.542,-1.441"
-                   />
-
-
-        <Button HorizontalAlignment="Left" Margin="748,322,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_health"
-                Click="btn_health_Click">
+        <Button HorizontalAlignment="Left" Margin="748,322,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_deposite"
+                Click="btn_deposite_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" 
@@ -171,7 +169,7 @@
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,10,0,0"/>
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="HEALTH" VerticalAlignment="Top"
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Deposite" VerticalAlignment="Top"
             FontSize="20" RenderTransformOrigin="0.389,0.479" FontWeight="Bold" Canvas.Left="44"/>
                     </Canvas>
                 </StackPanel>
@@ -180,8 +178,8 @@
 
 
 
-        <Button HorizontalAlignment="Left" Margin="446,493,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_banking"
-                Click="btn_banking_Click">
+        <Button HorizontalAlignment="Left" Margin="446,493,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_withdraw"
+                Click="btn_withdraw_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background" 
@@ -212,7 +210,7 @@
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,14,0,0"/>
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="BANKING" VerticalAlignment="Top"
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Withdraw" VerticalAlignment="Top"
             FontSize="20" RenderTransformOrigin="0.389,0.479" FontWeight="Bold" Canvas.Left="35"/>
                     </Canvas>
                 </StackPanel>
@@ -258,9 +256,6 @@
                 </StackPanel>
             </Button.Content>
         </Button>
-
-
-
 
 
     </Grid>

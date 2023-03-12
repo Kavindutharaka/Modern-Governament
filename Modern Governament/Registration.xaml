@@ -123,11 +123,19 @@
                            RenderTransformOrigin="0.469,0.534" VerticalAlignment="Top" HorizontalAlignment="Center"
                            Margin="0,10,0,50"
                            />
+                    <Canvas>
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="BIRTH CERTIFICATE" VerticalAlignment="Center"
+                   FontSize="15" RenderTransformOrigin="0.389,0.479" Height="48" Width="93" TextAlignment="Center" FontWeight="Bold" Canvas.Left="36" Canvas.Top="-48"/>
+                    </Canvas>
                 </StackPanel>
             </Button.Content>
 
         </Button>
-
+        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="REGISTRATION" VerticalAlignment="Top" 
+                   FontSize="25"
+                   Foreground="#ffffff" 
+                   RenderTransformOrigin="0.542,-1.441"
+                   />
 
         <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="REGISTRATION" VerticalAlignment="Top" 
                    FontSize="25"
@@ -167,6 +175,10 @@
                     <Image Source="/image/tomb.png" Height="70" Width="50"
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,10,0,0"/>
+                    <Canvas>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="DEATH CERTIFICATE" VerticalAlignment="Top"
+            FontSize="15" RenderTransformOrigin="0.389,0.479" Height="36" Width="108" TextAlignment="Center" FontWeight="Bold" Canvas.Left="27"/>
+                    </Canvas>
                 </StackPanel>
             </Button.Content>
         </Button>
@@ -204,7 +216,12 @@
                     <Image Source="/image/wedding.png" Height="70" Width="60"
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,14,0,0"/>
+                    <Canvas>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="MARRIAGE CERTIFICATE" VerticalAlignment="Top"
+            FontSize="15" RenderTransformOrigin="0.416,0.019" Height="40" Width="89" TextAlignment="Center" FontWeight="Bold" Canvas.Left="38"/>
+                    </Canvas>
                 </StackPanel>
+
             </Button.Content>
         </Button>
 
@@ -240,17 +257,17 @@
                     <Image Source="/image/license.png" Height="70" Width="60"
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,10,0,0"/>
+                    <Canvas>
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="DRIVE LICENCE" VerticalAlignment="Center"
+            FontSize="15" RenderTransformOrigin="0.389,0.479" Height="40" Width="94" TextAlignment="Center" FontWeight="Bold" Canvas.Left="36"/>
+                    </Canvas>
                 </StackPanel>
             </Button.Content>
         </Button>
-        <TextBlock HorizontalAlignment="Left" Margin="483,403,0,0" TextWrapping="Wrap" Text="BIRTH CERTIFICATE" VerticalAlignment="Top"
-                   FontSize="15" RenderTransformOrigin="0.389,0.479" Height="48" Width="93" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="776,403,0,0" TextWrapping="Wrap" Text="DEATH CERTIFICATE" VerticalAlignment="Top"
-            FontSize="15" RenderTransformOrigin="0.389,0.479" Height="36" Width="108" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="485,578,0,0" TextWrapping="Wrap" Text="MARRIAGE CERTIFICATE" VerticalAlignment="Top"
-            FontSize="15" RenderTransformOrigin="0.416,0.019" Height="40" Width="89" TextAlignment="Center" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="784,578,0,0" TextWrapping="Wrap" Text="DRIVE LICENCE" VerticalAlignment="Top"
-            FontSize="15" RenderTransformOrigin="0.389,0.479" Height="40" Width="94" TextAlignment="Center" FontWeight="Bold"/>
+
+
+
+
 
     </Grid>
 </Window>
