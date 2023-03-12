@@ -93,8 +93,39 @@ namespace Modern_Governament
         private void cmb_bgroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
            
-          selected = cmb_bgroup.SelectedItem.ToString();
-       
+          //selected = cmb_bgroup.SelectedItem.ToString();
+           if(cmb_bgroup.SelectedIndex== 0)
+            {
+                selected = "A+";
+            }
+           else if (cmb_bgroup.SelectedIndex == 1)
+            {
+                selected = "A-";
+            }
+           else if (cmb_bgroup.SelectedIndex == 2)
+            {
+                selected = "B+";
+            }
+            else if (cmb_bgroup.SelectedIndex == 3)
+            {
+                selected = "B-";
+            }
+            else if (cmb_bgroup.SelectedIndex == 4)
+            {
+                selected = "O+";
+            }
+            else if (cmb_bgroup.SelectedIndex == 5)
+            {
+                selected = "O-";
+            }
+            else if (cmb_bgroup.SelectedIndex == 6)
+            {
+                selected = "AB+";
+            }
+            else if (cmb_bgroup.SelectedIndex == 7)
+            {
+                selected = "AB-";
+            }
         }
     }
 }
