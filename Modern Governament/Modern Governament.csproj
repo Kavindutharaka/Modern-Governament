@@ -339,7 +339,7 @@
     <Resource Include="Image\back.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\previous-cyan.png" />
+    <Resource Include="Image\Backc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

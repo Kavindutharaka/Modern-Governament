@@ -48,5 +48,12 @@ namespace Modern_Governament
         {
             cc.Content = new renewlicen();
         }
+
+        private void btn_back_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            Registration r1= new Registration();
+            r1.Show();
+        }
     }
 }

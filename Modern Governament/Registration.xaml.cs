@@ -88,5 +88,10 @@ namespace Modern_Governament
             Home h1=new Home();
             h1.Show();
         }
+
+        private void btn_back_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

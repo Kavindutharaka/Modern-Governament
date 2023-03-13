@@ -5,8 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Modern_Governament"
         mc:Ignorable="d"
-        Title="Ddis" Height="450" Width="800">
+        Title="Ddis" Height="768" Width="1366"
+         WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#1a1c28"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        Loaded="Window_Loaded">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Center" Margin="0,60,0,0" TextWrapping="Wrap" Text="DriveLicen Display" VerticalAlignment="Top" 
+            FontSize="25"
+            Foreground="#ffffff" 
+            RenderTransformOrigin="0.542,-1.441"
+                   />
+        <RadioButton x:Name="rbn_reg_num" Content="Register number" Foreground="White" FontSize="15" UseLayoutRounding="False" Background="#FF03FFE2" Checked="rbn_reg_num_Checked" Margin="411,149,814,600"/>
+        <RadioButton x:Name="rbn_name" Content="Name" Foreground="White" FontSize="15" Checked="rbn_name_Checked" Margin="415,190,885,559"
+                    Background="Cyan" />
+        <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
+            FontSize="16"
+            FontWeight="Medium"
+            Foreground="#ff008e"
+            CaretBrush="White"
+            BorderBrush="Cyan"
+            Padding="4"
+            BorderThickness="2"
+            x:Name="txt_reg_num" Margin="624,149,381,576"/>
+        <Button  x:Name="btn_search"
+            Content="Search"
+            Foreground="#1a1c28"
+            FontSize="20"
+            Cursor="Hand"
+            FontFamily="Dosis bold"
+            Click="btn_search_Click" Margin="1029,129,37,539"
+                   >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#00ffff"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff008e"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Width="100" Height="30"
+                        CornerRadius="10"
+                        Background="{TemplateBinding Background}" Margin="60,25,60,22">
+                        <ContentPresenter VerticalAlignment="Center"
+                            HorizontalAlignment="Center"/>
+
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+
+        </Button>
+        <DataGrid x:Name="dataGridView1" Margin="-10,264,10,10">
+
+        </DataGrid>
+        <ComboBox x:Name="cmb_type" HorizontalAlignment="Left" Margin="123,158,0,0" VerticalAlignment="Top" Width="248" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="New"></ComboBoxItem>
+            <ComboBoxItem Content="Extend"></ComboBoxItem>
+        </ComboBox>
+        <TextBlock x:Name="lbl_error" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="210" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="16" Margin="123,105,0,0"/>
+
     </Grid>
 </Window>
