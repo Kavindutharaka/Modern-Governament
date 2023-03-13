@@ -60,8 +60,17 @@
     <Compile Include="Banking.xaml.cs">
       <DependentUpon>Banking.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BirDis.xaml.cs">
+      <DependentUpon>BirDis.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BirthRegistration.xaml.cs">
       <DependentUpon>BirthRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ddis.xaml.cs">
+      <DependentUpon>Ddis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deathdis.xaml.cs">
+      <DependentUpon>Deathdis.xaml</DependentUpon>
     </Compile>
     <Compile Include="Deathreg.xaml.cs">
       <DependentUpon>Deathreg.xaml</DependentUpon>
@@ -74,6 +83,9 @@
     </Compile>
     <Compile Include="Drivereg.xaml.cs">
       <DependentUpon>Drivereg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Homedis.xaml.cs">
+      <DependentUpon>Homedis.xaml</DependentUpon>
     </Compile>
     <Compile Include="imgpre.xaml.cs">
       <DependentUpon>imgpre.xaml</DependentUpon>
@@ -93,6 +105,9 @@
     <Compile Include="MarriageUpdate.xaml.cs">
       <DependentUpon>MarriageUpdate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mdis.xaml.cs">
+      <DependentUpon>Mdis.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NewRegistration.xaml.cs">
       <DependentUpon>NewRegistration.xaml</DependentUpon>
     </Compile>
@@ -104,6 +119,9 @@
     </Compile>
     <Compile Include="PrintReg.xaml.cs">
       <DependentUpon>PrintReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="regdis.xaml.cs">
+      <DependentUpon>regdis.xaml</DependentUpon>
     </Compile>
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
@@ -121,7 +139,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BirDis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BirthRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ddis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deathdis.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Homedis.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +225,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mdis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NewRegistration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -204,6 +242,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PrintReg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="regdis.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

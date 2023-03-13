@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Modern_Governament
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for Homedis.xaml
     /// </summary>
-    public partial class Home : Window
+    public partial class Homedis : Window
     {
-        public Home()
+        public Homedis()
         {
             InitializeComponent();
         }
@@ -32,22 +32,21 @@ namespace Modern_Governament
             }
         }
 
-        private void btn_close_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
         private void btn_minimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
 
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
 
         private void btn_registration_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            Registration r1= new Registration();
-            r1.Show();
+            regdis rd1=new regdis();
+            rd1.Show();
         }
 
         private void btn_health_Click(object sender, RoutedEventArgs e)
@@ -57,16 +56,17 @@ namespace Modern_Governament
 
         private void btn_banking_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
-            Banking b1= new Banking();  
-            b1.Show();
+
         }
 
         private void btn_report_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
-            Homedis hd1= new Homedis();
-            hd1.Show();
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
