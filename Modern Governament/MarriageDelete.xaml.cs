@@ -34,9 +34,28 @@ namespace Modern_Governament
 
         private void btn_delete_Click(object sender, RoutedEventArgs e)
         {
+            try { 
             con.Open();
             cmd = new SqlCommand("Delete from MarriageCertificate Where reg_num='" + txt_reg_num.Text + "'", con);
-            cmd.ExecuteNonQuery();
+                int i = cmd.ExecuteNonQuery();
+                if (i == 1)
+                {
+                    MessageBox.Show("Data Save Succesful", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Data Cannot save", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+         catch (SqlException)
+            {
+                MessageBox.Show("Error", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error", " Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
             con.Close();
         }
 

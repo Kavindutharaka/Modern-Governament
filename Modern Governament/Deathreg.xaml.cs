@@ -77,11 +77,96 @@ namespace Modern_Governament
 
         private void btn_add_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
 
-            
-            con.Open();
-            cmd = new SqlCommand("Insert into DeathCertificate values('"+txt_reg_num.Text+"','"+deathdate_picker.SelectedDate+"','"+txt_placedead.Text+"','"+txt_fname.Text+"','"+txt_age.Text+"','"+sex+"','"+txt_faname.Text+"','"+txt_moname.Text+"','"+txt_cousedeath.Text+"','"+txt_datereg.Text+"')", con);
-            cmd.ExecuteNonQuery();
+                con.Open();
+                cmd = new SqlCommand("Insert into DeathCertificate values('" + txt_reg_num.Text + "','" + deathdate_picker.SelectedDate + "','" + txt_placedead.Text + "','" + txt_fname.Text + "','" + txt_age.Text + "','" + sex + "','" + txt_faname.Text + "','" + txt_moname.Text + "','" + txt_cousedeath.Text + "','" + txt_datereg.Text + "')", con);
+                if(deathdate_picker.SelectedDate==null )
+                {
+                    lbl_dd.Text = "*Death date Cannot be null";
+                }
+                else if(txt_placedead.Text.Length==0)
+                {
+                    lbl_dd.Visibility = Visibility.Collapsed;
+                    lbl_pod.Text = "*Place of death cannot be blank";
+                }
+                else if(txt_placedead.Text.Any(char.IsDigit))
+                {
+                    lbl_pod.Text = "*Place of Death cannot have Number";
+                }
+                else if (txt_fname.Text.Length == 0)
+                {
+                    lbl_pod.Visibility = Visibility.Collapsed;
+                    lbl_fullname.Text = "*full name be blank";
+                }
+                else if (txt_fname.Text.Any(char.IsDigit))
+                {
+                    lbl_fullname.Text = "*full name cannot have Number";
+                }
+                else if (txt_age.Text.Length == 0)
+                {
+                    lbl_fullname.Visibility = Visibility.Collapsed;
+                    lbl_age.Text = "*age be blank";
+                }
+                else if (int.Parse(txt_age.Text)>0)
+                {
+                    lbl_age.Visibility = Visibility.Collapsed;
+                    lbl_age.Text = "*age Invalid";
+                }
+                else if(rbn_male.IsChecked==null && rbn_female.IsChecked==null )
+                {
+                    lbl_sex.Text = "*Please select Gender";
+                }
+                else if(txt_faname.Text.Length==0)
+                {
+                    lbl_sex.Visibility = Visibility.Collapsed;
+                    lbl_faname.Text = "Father Name Cannot be Blank";
+                }
+                else if(txt_faname.Text.Any(char.IsDigit))
+                {
+                    lbl_faname.Text = "Father Name Cannot have Number";
+                }
+                else if (txt_moname.Text.Length == 0)
+                {
+                    lbl_faname.Visibility = Visibility.Collapsed;
+                    lbl_moname.Text = "Mother Name Cannot be Blank";
+                }
+                else if (txt_moname.Text.Any(char.IsDigit))
+                {
+                    lbl_moname.Text = "Mother Name Cannot have Number";
+                }
+                else if (txt_cousedeath.Text.Length == 0)
+                {
+                    lbl_moname.Visibility = Visibility.Collapsed;
+                    lbl_reason.Text = "Death reason Cannot be Blank";
+                }
+                else if (txt_cousedeath.Text.Any(char.IsDigit))
+                {
+                    lbl_reason.Text = "Death reason Cannot have Number";
+                }
+                else
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        MessageBox.Show("Data Save Succesful", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Cannot save", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Error", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error", " Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             con.Close() ;
         }
 

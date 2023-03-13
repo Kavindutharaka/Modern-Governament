@@ -48,8 +48,17 @@
         </Button>
         <StackPanel>
             <Canvas>
-
+                <TextBlock x:Name="lbl_dd" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="180" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="lbl_pod" TextWrapping="Wrap" Width="194" Foreground="White" FontSize="14" Canvas.Left="866" Canvas.Top="236"/>
+                <TextBlock x:Name="lbl_age" TextWrapping="Wrap" Width="194" Foreground="White" FontSize="14" Canvas.Left="866" Canvas.Top="357"/>
+                <TextBlock x:Name="lbl_fullname" TextWrapping="Wrap" Width="194" Foreground="White" FontSize="14" Canvas.Left="866" Canvas.Top="294"/>
+                <TextBlock x:Name="lbl_sex" TextWrapping="Wrap" Width="194" Foreground="White" FontSize="14" Canvas.Left="866" Canvas.Top="417"/>
+                <TextBlock x:Name="lbl_faname" TextWrapping="Wrap" Width="194" Foreground="White" FontSize="14" Canvas.Left="867" Canvas.Top="472"/>
+                <TextBlock x:Name="lbl_moname" TextWrapping="Wrap" Width="194" Foreground="White" FontSize="14" Canvas.Left="867" Canvas.Top="531"/>
+                <TextBlock x:Name="lbl_reason" TextWrapping="Wrap" Width="194" Foreground="White" FontSize="14" Canvas.Left="867" Canvas.Top="580"/>
+                <TextBlock x:Name="lbl_datereg" TextWrapping="Wrap" Width="194" Foreground="White" FontSize="14" Canvas.Left="867" Canvas.Top="632"/>
             </Canvas>
+          
         </StackPanel>
         <TextBox RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Background="Transparent"
             FontSize="16"
@@ -59,7 +68,7 @@
             BorderBrush="Cyan"
             Padding="4"
             BorderThickness="2"
-            x:Name="txt_reg_num" Margin="552,120,217,614"/>
+            x:Name="txt_reg_num" Margin="552,120,217,614" IsReadOnly="True"/>
         <TextBlock TextWrapping="Wrap" Text="Registration No" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,124,835,616"/>
         <TextBlock TextWrapping="Wrap" Text="Date of Death" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="92,180,787,560"/>
         <DatePicker x:Name="deathdate_picker" Margin="552,180,196,560"/>
