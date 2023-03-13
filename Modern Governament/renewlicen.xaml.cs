@@ -51,32 +51,17 @@ namespace Modern_Governament
 
                 if (result == true)
                 {
-                try
-                {
+                
+                
                     txt_medicalreport.Text = openFileDlg.FileName;
                     // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
-                }
-                catch (OutOfMemoryException)
-                {
-                    MessageBox.Show("Please select image only", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                catch (FileNotFoundException)
-                {
-                    MessageBox.Show("Please select a File", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Errors", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
-                }
+                
+           
                 imgpre i1 = new imgpre();
                     i1.img1 = txt_medicalreport.Text;
                     i1.Show();
             }
-            else
-            {
-               
-            }
+         
 
             
           
@@ -91,11 +76,38 @@ namespace Modern_Governament
             {
                 con.Open();
                 cmd = new SqlCommand("Insert into driverlicenUpdate values('" + txt_reg_num.Text + "','" + selected + "','" + txt_medicalreport.Text + "','" + reg_date.Date + "','" + exp_date + "')", con);
+                if(txt_reg_num.Text.Length==0) 
+                {
+                    lbl_lno.Text = "Plese enter reg num";
+                }
+                else if(txt_medicalreport.Text.Length==0)
+                {
+                    lbl_lno.Text = "Insert MEdical report";
+                }
+                else if(cmb_medicalreport.SelectedIndex==-1)
+                {
+                    lbl_cmb.Text = "Plase selecte item";
+                }
+                else
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        MessageBox.Show("Data Save Succesful", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Cannot save", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
                
             }
             catch (SqlException)
             {
                 MessageBox.Show("Database Error", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                lbl_lno.Text = "*Please enter Image only";
+                txt_medicalreport.Clear();
+                txt_medicalreport.Focus();
             }
             catch (Exception)
             {

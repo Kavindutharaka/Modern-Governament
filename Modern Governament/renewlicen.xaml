@@ -136,5 +136,9 @@
 
 
         </Button>
+        <Canvas>
+            <TextBlock x:Name="lbl_lno" TextWrapping="Wrap"  Canvas.Left="863" Canvas.Top="268" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+            <TextBlock x:Name="lbl_cmb" TextWrapping="Wrap"  Canvas.Left="863" Canvas.Top="457" Width="193" Foreground="White" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas>
     </Grid>
 </UserControl>
