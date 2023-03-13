@@ -9,6 +9,10 @@
              Background="#1a1c28"
              Loaded="UserControl_Loaded">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="715*"/>
+        </Grid.RowDefinitions>
         <Button Name="btn_minimize"
                 Content="-"
                 Foreground="White"
@@ -18,7 +22,7 @@
                 Grid.Column="0"
                 Height="30" Width="30"
                 Click="btn_minimize_Click"
-                Margin="953,19,83,719" FontWeight="Medium" RenderTransformOrigin="0.517,-1.267"
+                Margin="953,19,83,4" FontWeight="Medium" RenderTransformOrigin="0.517,-1.267"
                 >
 
             <Button.Style>
@@ -57,7 +61,7 @@
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
                 Click="btn_close_Click"
-                Margin="988,19,48,719" RenderTransformOrigin="0.567,0.533">
+                Margin="988,19,48,4" RenderTransformOrigin="0.567,0.533">
 
             <Button.Style>
                 <Style TargetType="Button">
@@ -83,7 +87,7 @@
 
 
         </Button>
-        <StackPanel >
+        <StackPanel Grid.RowSpan="2" >
             <Canvas>
 
                 <TextBlock TextWrapping="Wrap" Text="New Registration" Height="55" Width="353" RenderTransformOrigin="0.499,0.511" FontSize="36" Foreground="White" TextAlignment="Center" Canvas.Left="376" Canvas.Top="15"/>
@@ -219,7 +223,9 @@
                         </LinearGradientBrush>
                     </DatePicker.BorderBrush>
                 </DatePicker>
+                <TextBlock TextWrapping="Wrap"  Canvas.Left="870" Canvas.Top="130" HorizontalAlignment="Left" VerticalAlignment="Center" Width="193" Foreground="White"/>
             </Canvas>
+            
 
 
 

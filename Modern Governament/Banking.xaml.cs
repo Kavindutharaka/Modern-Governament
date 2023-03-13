@@ -48,7 +48,9 @@ namespace Modern_Governament
 
         private void btn_loan_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
+            Loan l1= new Loan();
+            l1.Show();
         }
     }
 }

@@ -93,11 +93,17 @@ namespace Modern_Governament
         {
             DateTime reg_date;
             reg_date = DateTime.Now;
-            con.Open();
-            cmd = new SqlCommand("Insert into BirthCertificate values('"+txt_reg_num.Text+"','"+txt_full_name.Text+"','"+sex+"','"+txt_place_birth.Text+"','"+dob_picker.SelectedDate+"','"+txt_fname.Text+"','"+fdob_picker.SelectedDate +"','"+txt_mname.Text+"','"+mdob_picker.SelectedDate + "',@b)", con);
-            cmd.Parameters.AddWithValue("b", reg_date);
-            cmd.ExecuteNonQuery();
-            con.Close();
+
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand("Insert into BirthCertificate values('" + txt_reg_num.Text + "','" + txt_full_name.Text + "','" + sex + "','" + txt_place_birth.Text + "','" + dob_picker.SelectedDate + "','" + txt_fname.Text + "','" + fdob_picker.SelectedDate + "','" + txt_mname.Text + "','" + mdob_picker.SelectedDate + "',@b)", con);
+                cmd.Parameters.AddWithValue("b", reg_date);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch(SqlException)
+            { }
 
             PrintReg pr1=new PrintReg();
             pr1.lbl_reg.Text = txt_reg_num.Text;

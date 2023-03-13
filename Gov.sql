@@ -30,4 +30,6 @@ FROM driverlicen
 JOIN driverlicenUpdate  
 ON driverlicen .reg_num = driverlicenUpdate.Licen_no;
 insert into driverlicen values('DL000001',);
+create table loan(loan_no varchar(12),cus_name varchar(30),cus_address varchar(30),nic varchar(15),reason varchar(20),job_name varchar(15),
+job_address varchar(30),job_postion varchar(15),job_tp int,tp int,wit_name varchar(30),wit_address varchar(30),wit_tp int);
  
