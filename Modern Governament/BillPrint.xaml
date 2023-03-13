@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Modern_Governament.BillPrint"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Modern_Governament"
+             mc:Ignorable="d"
+             Background="White"
+             Loaded="UserControl_Loaded" Height="259" Width="278">
+    <Grid >
+        <TextBlock HorizontalAlignment="Left" Margin="117,33,0,0" TextWrapping="Wrap" Text="Bill" VerticalAlignment="Top" Height="50" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,75,0,0" TextWrapping="Wrap" Text="Bill No" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,213,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="37,126,0,0" TextWrapping="Wrap" Text="Payment Method" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lbl_no" HorizontalAlignment="Left" Margin="180,75,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="105"/>
+        <TextBlock x:Name="lbl_method" HorizontalAlignment="Left" Margin="180,126,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="105"/>
+        <TextBlock x:Name="lbl_total" HorizontalAlignment="Left" Margin="180,216,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="105"/>
+
+    </Grid>
+</UserControl>

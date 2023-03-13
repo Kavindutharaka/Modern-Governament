@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Modern_Governament.Printdeath"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Modern_Governament"
+             mc:Ignorable="d" 
+              d:DesignHeight="1188" d:DesignWidth="840"
+             Background="White"
+             Loaded="UserControl_Loaded">
+    <Grid>
+        <TextBlock Text="Registor Number" FontSize="20" Margin="168,326,492,828"/>
+        <TextBlock Text="Date of Dead" FontSize="20" Margin="168,384,550,766"/>
+        <TextBlock Text="Place_of_Death" FontSize="20" Margin="168,452,492,702"/>
+        <TextBlock Text="Full Name" FontSize="20" Margin="168,518,492,636"/>
+        <TextBlock Text="Age" FontSize="20" Margin="168,577,492,577"/>
+        <TextBlock Text="Sex" FontSize="20" Margin="168,640,492,514"/>
+        <TextBlock Text="Couse of Death" FontSize="20" Margin="168,850,492,306"/>
+        <TextBlock Text="Date of Registration" FontSize="20" Margin="544,982,116,174"/>
+        <TextBlock x:Name="lbl_reg" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,332,233,832"/>
+        <TextBlock x:Name="lbl_dod" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,386,233,778"/>
+        <TextBlock x:Name="lbl_pod" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,460,268,710"/>
+        <TextBlock x:Name="lbl_fname" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,526,268,637"/>
+        <TextBlock x:Name="lbl_age" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,581,268,574"/>
+        <TextBlock x:Name="lbl_sex" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,640,268,515"/>
+        <TextBlock x:Name="lbl_fathname" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,707,268,444"/>
+        <TextBlock x:Name="lbl_reason" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,855,268,312"/>
+        <TextBlock x:Name="lbl_regdate" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" TextAlignment="Center" Margin="569,951,141,211"/>
+        <Image Source="/Image/Logo.png" Margin="358,18,386,1008"/>
+        <TextBlock Text="Death Certificate" FontSize="20" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Margin="272,212,300,929"/>
+        <TextBlock Text="Father's Name" FontSize="20" Margin="168,703,492,451"/>
+        <TextBlock Text="Mother's Name" FontSize="20" Margin="168,779,492,375"/>
+        <TextBlock x:Name="lbl_moname" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontWeight="Medium" Margin="444,783,268,368"/>
+
+    </Grid>
+</UserControl>

@@ -86,181 +86,142 @@
 
 
         </Button>
+        <Canvas>
 
 
-        <Button  HorizontalAlignment="Left" Margin="446,321,0,0" VerticalAlignment="Top" Height="130" Width="165"
+            <Button  HorizontalAlignment="Left" Margin="406,340,0,0" VerticalAlignment="Top" Height="130" Width="165"
             
             FontSize="20" FontWeight="Bold" Cursor="Hand" Name="btn_registration" Click="btn_registration_Click">
 
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" 
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" 
                         Value="#00ffff"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff008e"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
 
-                    <Border 
+                        <Border 
                                         CornerRadius="0"
                                         Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Bottom"
+                            <ContentPresenter VerticalAlignment="Bottom"
                                                       HorizontalAlignment="Center"/>
 
-                    </Border>
-                </ControlTemplate>
+                        </Border>
+                    </ControlTemplate>
 
-            </Button.Template>
-            <Button.Content>
-                <StackPanel Width="165">
-                    <Image Source="/image/audit.png" Height="82" Width="80"
+                </Button.Template>
+                <Button.Content>
+                    <StackPanel Width="165">
+                        <Image Source="/image/audit.png" Height="82" Width="80"
                            RenderTransformOrigin="0.469,0.534" VerticalAlignment="Top" HorizontalAlignment="Center"
                            Margin="10,10,0,50"
                            />
-                    <Canvas>
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="REGISTRATION" VerticalAlignment="Top"
+                        <Canvas>
+                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="REGISTRATION" VerticalAlignment="Top"
                    FontSize="20" RenderTransformOrigin="0.389,0.479" Canvas.Left="11" Canvas.Top="-49"/>
-                    </Canvas>
-                </StackPanel>
-            </Button.Content>
+                        </Canvas>
+                    </StackPanel>
+                </Button.Content>
 
-        </Button>
+            </Button>
 
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="Home" VerticalAlignment="Top" 
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Home" VerticalAlignment="Center" 
                    FontSize="25"
                    Foreground="#ffffff" 
-                   RenderTransformOrigin="0.542,-1.441"
+                   RenderTransformOrigin="0.542,-1.441" Canvas.Left="654" Canvas.Top="197"
                    />
 
 
-        <Button HorizontalAlignment="Left" Margin="748,322,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_health"
-                Click="btn_health_Click">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" 
-                        Value="#00ffff"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
 
-                    <Border 
-                                        CornerRadius="0"
-                                        Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Bottom"
-                                                      HorizontalAlignment="Center"/>
-
-                    </Border>
-                </ControlTemplate>
-
-            </Button.Template>
-            <Button.Content>
-                <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
-                    <Image Source="/image/health.png" Height="82" Width="80"
-                           RenderTransformOrigin="0.469,0.530"
-                           Margin="0,10,0,0"/>
-                    <Canvas>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="HEALTH" VerticalAlignment="Top"
-            FontSize="20" RenderTransformOrigin="0.389,0.479" FontWeight="Bold" Canvas.Left="44"/>
-                    </Canvas>
-                </StackPanel>
-            </Button.Content>
-        </Button>
-
-
-
-        <Button HorizontalAlignment="Left" Margin="446,493,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_banking"
+            <Button HorizontalAlignment="Left" Margin="605,340,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_banking"
                 Click="btn_banking_Click">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" 
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" 
                         Value="#00ffff"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff008e"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
 
-                    <Border 
+                        <Border 
                                         CornerRadius="0"
                                         Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Bottom"
+                            <ContentPresenter VerticalAlignment="Bottom"
                                                       HorizontalAlignment="Center"/>
 
-                    </Border>
-                </ControlTemplate>
+                        </Border>
+                    </ControlTemplate>
 
-            </Button.Template>
-            <Button.Content>
-                <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
-                    <Image Source="/image/bank.png" Height="74" Width="78"
+                </Button.Template>
+                <Button.Content>
+                    <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
+                        <Image Source="/image/bank.png" Height="74" Width="78"
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,14,0,0"/>
-                    <Canvas>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="BANKING" VerticalAlignment="Top"
-            FontSize="20" RenderTransformOrigin="0.389,0.479" FontWeight="Bold" Canvas.Left="35"/>
-                    </Canvas>
-                </StackPanel>
-            </Button.Content>
-        </Button>
+                        <Canvas>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Payment" VerticalAlignment="Center"
+            FontSize="20" RenderTransformOrigin="0.389,0.479" FontWeight="Bold" Canvas.Left="41"/>
+                        </Canvas>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
 
 
-        <Button  HorizontalAlignment="Left" Margin="748,493,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_report"
+            <Button  HorizontalAlignment="Left" Margin="800,340,0,0" VerticalAlignment="Top" Height="130" Width="165" Cursor="Hand" Name="btn_report"
                  Click="btn_report_Click">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" 
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" 
                         Value="#00ffff"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff008e"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
 
-                    <Border 
+                        <Border 
                                         CornerRadius="0"
                                         Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Bottom"
+                            <ContentPresenter VerticalAlignment="Bottom"
                                                       HorizontalAlignment="Center"/>
 
-                    </Border>
-                </ControlTemplate>
+                        </Border>
+                    </ControlTemplate>
 
-            </Button.Template>
-            <Button.Content>
-                <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
-                    <Image Source="/image/report.png" Height="82" Width="80"
+                </Button.Template>
+                <Button.Content>
+                    <StackPanel Width="165" RenderTransformOrigin="0.481,0.858" Height="130">
+                        <Image Source="/image/report.png" Height="82" Width="80"
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,10,0,0"/>
-                    <Canvas>
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="REPORTS" VerticalAlignment="Center"
+                        <Canvas>
+                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="REPORTS" VerticalAlignment="Center"
             FontSize="20" RenderTransformOrigin="0.389,0.479" Canvas.Left="42" FontWeight="Bold"/>
-                    </Canvas>
-                </StackPanel>
-            </Button.Content>
-        </Button>
+                        </Canvas>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
 
 
-
+        </Canvas>
 
 
     </Grid>

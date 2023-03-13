@@ -50,23 +50,20 @@ namespace Modern_Governament
             r1.Show();
         }
 
-        private void btn_health_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
 
         private void btn_banking_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            Banking b1= new Banking();  
+            Payment b1= new Payment();  
             b1.Show();
         }
 
         private void btn_report_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            Homedis hd1= new Homedis();
-            hd1.Show();
+            regdis rd= new regdis();
+            rd.Show();
         }
     }
 }

@@ -22,7 +22,7 @@
                 Grid.Column="0"
                 Height="30" Width="30"
                 Click="btn_minimize_Click"
-                Margin="1180,0,0,518" FontWeight="Medium"
+                Margin="1269,35,67,703" FontWeight="Medium"
                 >
 
             <Button.Style>
@@ -61,7 +61,7 @@
                 VerticalContentAlignment="Center"
                 HorizontalContentAlignment="Center"
                 Click="btn_close_Click"
-                Margin="1250,0,0,518">
+                Margin="1304,35,32,703">
 
             <Button.Style>
                 <Style TargetType="Button">
@@ -124,23 +124,18 @@
                            Margin="0,10,0,50"
                            />
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="BIRTH CERTIFICATE" VerticalAlignment="Center"
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="BIRTH DISPLAY" VerticalAlignment="Center"
                    FontSize="15" RenderTransformOrigin="0.389,0.479" Height="48" Width="93" TextAlignment="Center" FontWeight="Bold" Canvas.Left="36" Canvas.Top="-48"/>
                     </Canvas>
                 </StackPanel>
             </Button.Content>
 
         </Button>
-        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="REGISTRATION" VerticalAlignment="Top" 
-                   FontSize="25"
-                   Foreground="#ffffff" 
-                   RenderTransformOrigin="0.542,-1.441"
-                   />
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,163,0,0" TextWrapping="Wrap" Text="REGISTRATION" VerticalAlignment="Top" 
+        <TextBlock HorizontalAlignment="Center" Margin="0,182,0,0" TextWrapping="Wrap" Text="REGISTRATION DISPLAY" VerticalAlignment="Top" 
                    FontSize="25"
                    Foreground="#ffffff" 
-                   RenderTransformOrigin="0.542,-1.441"
+                   RenderTransformOrigin="0.542,-1.441" Height="71" Width="226" TextAlignment="Center"
                    />
 
 
@@ -176,7 +171,7 @@
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,10,0,0"/>
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="DEATH CERTIFICATE" VerticalAlignment="Top"
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="DEATH DISPLAY" VerticalAlignment="Top"
             FontSize="15" RenderTransformOrigin="0.389,0.479" Height="36" Width="108" TextAlignment="Center" FontWeight="Bold" Canvas.Left="27"/>
                     </Canvas>
                 </StackPanel>
@@ -217,7 +212,7 @@
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,14,0,0"/>
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="MARRIAGE CERTIFICATE" VerticalAlignment="Top"
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="MARRIAGE DISPLAY" VerticalAlignment="Top"
             FontSize="15" RenderTransformOrigin="0.416,0.019" Height="40" Width="89" TextAlignment="Center" FontWeight="Bold" Canvas.Left="38"/>
                     </Canvas>
                 </StackPanel>
@@ -258,7 +253,7 @@
                            RenderTransformOrigin="0.469,0.530"
                            Margin="0,10,0,0"/>
                     <Canvas>
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="DRIVE LICENCE" VerticalAlignment="Center"
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="DRIVE DISPLAY" VerticalAlignment="Center"
             FontSize="15" RenderTransformOrigin="0.389,0.479" Height="40" Width="94" TextAlignment="Center" FontWeight="Bold" Canvas.Left="36"/>
                     </Canvas>
                 </StackPanel>
@@ -267,45 +262,45 @@
 
 
 
-        <Button Cursor="Hand" Name="btn_back"
-                 Click="btn_back_Click" Margin="28,96,1289,628">
 
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background" 
+        <Canvas>
+            <Button Cursor="Hand" Name="btn_back"
+                 Click="btn_back_Click_1" Margin="8,30,9,8">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" 
                         Value="Transparent"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#ff008e"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff008e"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
 
-                    <Border 
-                                        CornerRadius="25"
+                        <Border Height="40" Width="40"
+                                        CornerRadius="40"
                                         Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Bottom"
+                            <ContentPresenter VerticalAlignment="Bottom"
                                                       HorizontalAlignment="Center"/>
 
-                    </Border>
-                </ControlTemplate>
+                        </Border>
+                    </ControlTemplate>
 
-            </Button.Template>
-            <Button.Content>
-                <StackPanel>
-                    <Image Source="/image/back.png" Height="40" Width="60"
+                </Button.Template>
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="/image/backc.png" Height="40" Width="60"
                            RenderTransformOrigin="0.575,0.5"
                            />
 
-                </StackPanel>
-            </Button.Content>
-        </Button>
-
-
-
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </Canvas>
 
 
     </Grid>

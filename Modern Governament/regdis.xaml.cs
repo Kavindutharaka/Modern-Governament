@@ -75,11 +75,11 @@ namespace Modern_Governament
             ddis1.Show();
         }
 
-        private void btn_back_Click(object sender, RoutedEventArgs e)
+        private void btn_back_Click_1(object sender, RoutedEventArgs e)
         {
             Hide();
-            Homedis homedis=new Homedis();  
-            homedis.Show();
+            Home h1=new Home();
+            h1.Show();
         }
     }
 }

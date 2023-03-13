@@ -60,6 +60,9 @@
     <Compile Include="Banking.xaml.cs">
       <DependentUpon>Banking.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BillPrint.xaml.cs">
+      <DependentUpon>BillPrint.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BirDis.xaml.cs">
       <DependentUpon>BirDis.xaml</DependentUpon>
     </Compile>
@@ -90,9 +93,6 @@
     <Compile Include="imgpre.xaml.cs">
       <DependentUpon>imgpre.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Loan.xaml.cs">
-      <DependentUpon>Loan.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MarriageDelete.xaml.cs">
       <DependentUpon>MarriageDelete.xaml</DependentUpon>
     </Compile>
@@ -117,6 +117,9 @@
     <Compile Include="Payment.xaml.cs">
       <DependentUpon>Payment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Printdeath.xaml.cs">
+      <DependentUpon>Printdeath.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrintReg.xaml.cs">
       <DependentUpon>PrintReg.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,9 @@
     <Compile Include="renewlicen.xaml.cs">
       <DependentUpon>renewlicen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Secpa.xaml.cs">
+      <DependentUpon>Secpa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="secpay.xaml.cs">
       <DependentUpon>secpay.xaml</DependentUpon>
     </Compile>
@@ -136,6 +142,10 @@
       <DependentUpon>Update.xaml</DependentUpon>
     </Compile>
     <Page Include="Banking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BillPrint.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,10 +190,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="imgpre.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Loan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -241,6 +247,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Printdeath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PrintReg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -254,6 +264,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="renewlicen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Secpa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

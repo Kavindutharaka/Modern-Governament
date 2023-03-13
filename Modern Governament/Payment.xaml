@@ -49,7 +49,7 @@
             x:Name="txt_amount" Canvas.Left="828" Canvas.Top="142" HorizontalAlignment="Left" VerticalAlignment="Top" Width="306"/>
             <TextBlock TextWrapping="Wrap" Text="Bill Amount" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="256" Canvas.Top="149" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <TextBlock TextWrapping="Wrap" Text="Bill Type" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="256" Canvas.Top="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="306" Height="28" Canvas.Left="828" Canvas.Top="34">
+            <ComboBox x:Name="cmb_type" HorizontalAlignment="Left" VerticalAlignment="Top" Width="306" Height="28" Canvas.Left="828" Canvas.Top="34" SelectionChanged="cmb_type_SelectionChanged">
                 <ComboBoxItem Content = "Water Bill" />
                 <ComboBoxItem Content = "Electricity" />
                 <ComboBoxItem Content = "Telecomunication" />
@@ -215,5 +215,119 @@
             x:Name="txt_amount2"  Margin="831,160,228,22" Grid.RowSpan="2" Grid.Row="4"/>
         <TextBlock x:Name="lbl_billamount2" TextWrapping="Wrap" Text="Bill Amount"  FontSize="20" Foreground="White" Margin="254,164,1008,24" Grid.Row="4" Grid.RowSpan="2"/>
 
+        <Canvas>
+            <Button Cursor="Hand" Name="btn_back"
+                 Click="btn_back_Click" Margin="8,30,9,8">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" 
+                        Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff008e"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+
+                        <Border Height="40" Width="40"
+                                        CornerRadius="40"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Bottom"
+                                                      HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+
+                </Button.Template>
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="/image/backc.png" Height="40" Width="60"
+                           RenderTransformOrigin="0.575,0.5"
+                           />
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+
+            <Button Name="btn_minimize"
+                Content="-"
+                Foreground="White"
+                FontSize="20"
+                FontFamily="Dosis SemiBold"
+                Cursor="Hand"
+                Grid.Column="0"
+                Height="30" Width="30"
+                Click="btn_minimize_Click"
+                Margin="1259,40,77,698" FontWeight="Medium"
+                >
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#1a1c28"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff008e"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="30" Height="30"
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+
+            </Button>
+
+            <Button Name="btn_close"
+                Content="X"
+                Foreground="White"
+                FontSize="13"
+                FontFamily="Dosis SemiBold"
+                Cursor="Hand"
+                Grid.Column="0"
+                Height="30" Width="30"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Click="btn_close_Click"
+                Margin="1294,40,42,698">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#1a1c28"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff008e"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="30" Height="30"
+                                        CornerRadius="0"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+
+            </Button>
+
+        </Canvas>
     </Grid>
 </Window>

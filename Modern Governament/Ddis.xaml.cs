@@ -135,5 +135,12 @@ namespace Modern_Governament
                 rbn_name.Visibility = Visibility.Visible;
             }
         }
+
+        private void btn_back_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            regdis rd1 = new regdis();
+            rd1.Show();
+        }
     }
 }

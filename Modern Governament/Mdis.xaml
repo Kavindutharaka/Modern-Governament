@@ -65,5 +65,44 @@
         <DataGrid x:Name="dataGridView1" Margin="-10,264,10,10">
 
         </DataGrid>
+
+        <Canvas>
+            <Button Cursor="Hand" Name="btn_back"
+                 Click="btn_back_Click" Margin="8,30,9,8">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" 
+                        Value="Transparent"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff008e"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+
+                        <Border Height="40" Width="40"
+                                        CornerRadius="40"
+                                        Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Bottom"
+                                                      HorizontalAlignment="Center"/>
+
+                        </Border>
+                    </ControlTemplate>
+
+                </Button.Template>
+                <Button.Content>
+                    <StackPanel>
+                        <Image Source="/image/backc.png" Height="40" Width="60"
+                           RenderTransformOrigin="0.575,0.5"
+                           />
+
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </Canvas>
     </Grid>
 </Window>

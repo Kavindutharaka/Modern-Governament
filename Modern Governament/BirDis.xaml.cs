@@ -89,5 +89,12 @@ namespace Modern_Governament
         {
             con = new SqlConnection("Data Source=DESKTOP-13KGUEB;Initial Catalog=Government;Integrated Security=True");
         }
+
+        private void btn_back_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            regdis rd1=new regdis();
+            rd1.Show();
+        }
     }
 }

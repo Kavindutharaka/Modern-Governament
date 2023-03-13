@@ -151,6 +151,21 @@ namespace Modern_Governament
                     if (i == 1)
                     {
                         MessageBox.Show("Data Save Succesful", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        Printdeath pd1=new Printdeath();
+                        pd1.lbl_reg.Text=txt_reg_num.Text;
+                        pd1.lbl_dod.Text=deathdate_picker.Text;
+                        pd1.lbl_fname.Text=txt_fname.Text;
+                        pd1.lbl_age.Text=txt_age.Text;
+                        pd1.lbl_sex.Text = sex;
+                        pd1.lbl_fathname.Text=txt_faname.Text;
+                        pd1.lbl_moname.Text=txt_moname.Text;
+                        pd1.lbl_reason.Text = txt_cousedeath.Text;
+                        PrintDialog printDlg = new PrintDialog();
+                        if (printDlg.ShowDialog() == true)
+                        {
+                            printDlg.PrintVisual(pd1, "User Control Printing.");
+                        }
                     }
                     else
                     {

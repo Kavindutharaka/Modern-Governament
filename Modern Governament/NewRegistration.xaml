@@ -131,7 +131,7 @@
                 <TextBlock TextWrapping="Wrap" Text="Father" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="466" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBlock TextWrapping="Wrap" Text="Full Name" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="466" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <TextBlock TextWrapping="Wrap" Text="DOB" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="516" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBlock TextWrapping="Wrap" Text="Father" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="576" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock TextWrapping="Wrap" Text="Mother" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="576" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBlock TextWrapping="Wrap" Text="Full Name" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="580" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBlock TextWrapping="Wrap" Text="DOB" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="313" Canvas.Top="630" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <TextBox x:Name="txt_fname"  Width="298" Height="34" RenderTransformOrigin="0.479,-1.083"  TextWrapping="Wrap" Canvas.Left="552" Canvas.Top="460" Background="Transparent"
@@ -184,7 +184,7 @@
 
 
                 </Button>
-                <DatePicker x:Name="dob_picker" Canvas.Left="552" Canvas.Top="399" HorizontalAlignment="Left" VerticalAlignment="Center" Width="297" Height="28">
+                <DatePicker x:Name="dob_picker" Canvas.Left="552" Canvas.Top="399" HorizontalAlignment="Left" VerticalAlignment="Center" Width="297" Height="28" Background="{x:Null}" Foreground="Black">
                     <DatePicker.Style>
                         <Style/>
                     </DatePicker.Style>

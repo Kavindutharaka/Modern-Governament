@@ -12,44 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Xml.Schema;
 
 namespace Modern_Governament
 {
     /// <summary>
-    /// Interaction logic for secpay.xaml
+    /// Interaction logic for Secpa.xaml
     /// </summary>
-    public partial class secpay : UserControl
+    public partial class Secpa : UserControl
     {
-        public secpay()
+        public Secpa()
         {
             InitializeComponent();
         }
-        public string bill_no, bill_type;
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-          
+
         }
 
         private void cmb_type_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(cmb_type.SelectedIndex==0)
-            {
-                bill_type = "WaterBill";
-            }
-            else if(cmb_type.SelectedIndex==1) 
-            {
-                bill_type = "ElectricityBill";
-            }
-            else
-            {
-                bill_type = "Telcombill";
-            }
-        }
 
-        public void get()
-        {
-            txt_reg_num.Text = bill_no;
         }
     }
 }
