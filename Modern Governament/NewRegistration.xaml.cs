@@ -99,11 +99,31 @@ namespace Modern_Governament
                 con.Open();
                 cmd = new SqlCommand("Insert into BirthCertificate values('" + txt_reg_num.Text + "','" + txt_full_name.Text + "','" + sex + "','" + txt_place_birth.Text + "','" + dob_picker.SelectedDate + "','" + txt_fname.Text + "','" + fdob_picker.SelectedDate + "','" + txt_mname.Text + "','" + mdob_picker.SelectedDate + "',@b)", con);
                 cmd.Parameters.AddWithValue("b", reg_date);
-                cmd.ExecuteNonQuery();
+               // cmd.ExecuteNonQuery();
+               
+                if(string.IsNullOrEmpty(txt_full_name.Text))
+                {
+                    lbl_fullname.Text = "*Full Name Cannot be blank";
+                    txt_full_name.Focus();
+                }
+                else
+                {
+                    int i= cmd.ExecuteNonQuery();
+                    if (i == 1) 
+                    {
+                        MessageBox.Show("Data Save Succesful","Info",MessageBoxButton.OK,MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Cannot save","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+                    }
+                }
                 con.Close();
             }
+
             catch(SqlException)
-            { }
+            { MessageBox.Show("Error", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+            catch (Exception) { MessageBox.Show("Error", " Error", MessageBoxButton.OK, MessageBoxImage.Error); }
 
             PrintReg pr1=new PrintReg();
             pr1.lbl_reg.Text = txt_reg_num.Text;

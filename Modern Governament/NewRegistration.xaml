@@ -223,9 +223,9 @@
                         </LinearGradientBrush>
                     </DatePicker.BorderBrush>
                 </DatePicker>
-                <TextBlock TextWrapping="Wrap"  Canvas.Left="870" Canvas.Top="130" HorizontalAlignment="Left" VerticalAlignment="Center" Width="193" Foreground="White"/>
+                <TextBlock x:Name="lbl_fullname" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="210" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
             </Canvas>
-            
+
 
 
 
