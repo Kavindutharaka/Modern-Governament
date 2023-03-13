@@ -108,7 +108,9 @@
                           BorderThickness="2"/>
 
                 <TextBlock TextWrapping="Wrap" Text="Registration No" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" HorizontalAlignment="Left" Canvas.Left="92" Canvas.Top="124"/>
+                <TextBlock x:Name="lbl_error" TextWrapping="Wrap" Width="394" Foreground="White" FontSize="22" Height="91" Canvas.Left="664" Canvas.Top="15"/>
             </Canvas>
+
         </StackPanel>
         <TextBlock TextWrapping="Wrap" Text="Date of Marriage" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="94,16,786,544" Grid.Row="1"/>
         <TextBlock TextWrapping="Wrap" Text="1st Party" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Margin="459,57,420,503" Grid.Row="1"/>
