@@ -18,7 +18,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border BorderBrush="Cyan" BorderThickness="0,0,0,5">
-            
+
         </Border>
         <Button Name="btn_minimize"
                 Content="-"
@@ -232,6 +232,13 @@
                 </LinearGradientBrush>
             </DatePicker.BorderBrush>
         </DatePicker>
+        <Canvas>
+            <TextBlock x:Name="lbl_fullname" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="210" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+            <TextBlock x:Name="lbl_POB" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="343" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+            <TextBlock x:Name="lbl_faname" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="470" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+            <TextBlock x:Name="lbl_moname" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="572" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+        </Canvas>
+
     </Grid>
 
 

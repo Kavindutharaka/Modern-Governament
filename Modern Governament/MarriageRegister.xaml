@@ -97,7 +97,7 @@
                              BorderBrush="Cyan"
                         Padding="4" VerticalAlignment="Center"
                           BorderThickness="2"
-                          Name="txt_reg_num"/>
+                          Name="txt_reg_num" IsReadOnly="True"/>
 
                 <TextBlock TextWrapping="Wrap" Text="Registration No" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" HorizontalAlignment="Left" Canvas.Left="92" Canvas.Top="124"/>
                 <TextBlock TextWrapping="Wrap" Text="Date of Marriage" Height="28" Width="187" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="180" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -258,5 +258,8 @@
 
         </StackPanel>
         <DatePicker x:Name="sp_dob_picker" Margin="700,384,48,356"/>
+        <Canvas>
+            <TextBlock x:Name="lbl_error" TextWrapping="Wrap"  Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="395" Foreground="White" FontSize="22" Height="91"/>
+        </Canvas>
     </Grid>
 </UserControl>

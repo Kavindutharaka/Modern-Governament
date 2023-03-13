@@ -101,7 +101,7 @@
                              BorderBrush="Cyan"
                         Padding="4" VerticalAlignment="Center"
                           BorderThickness="2"
-                          Name="txt_reg_num"/>
+                          Name="txt_reg_num" IsReadOnly="True"/>
 
                 <TextBlock TextWrapping="Wrap" Text="Registration No" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" HorizontalAlignment="Left" Canvas.Left="92" Canvas.Top="124"/>
                 <TextBlock TextWrapping="Wrap" Text="Full Name" Height="28" Width="139" RenderTransformOrigin="0.499,0.511" FontSize="20" Foreground="White" Canvas.Left="92" Canvas.Top="207" HorizontalAlignment="Center" VerticalAlignment="Top"/>

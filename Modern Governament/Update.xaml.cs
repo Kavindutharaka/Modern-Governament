@@ -41,18 +41,61 @@ namespace Modern_Governament
 
         private void btn_update_Click(object sender, RoutedEventArgs e)
         {
-            DateTime reg_date;
-            reg_date = DateTime.Now;
-
-            if(dob_picker.Text.Length==0 && fdob_picker.Text.Length==0 && mdob_picker.Text.Length==0)
+            try
             {
+                DateTime reg_date;
+                reg_date = DateTime.Now;
+
+
                 con.Open();
-                cmd = new SqlCommand("update BirthCertificate set full_name='" + txt_full_name.Text + "',sex='"+sex+"',place_birth='" + txt_place_birth.Text + "',dob='"+dob_picker.SelectedDate+"',f_name='" + txt_fname.Text + "',f_dob='"+fdob_picker.SelectedDate+"',m_name='" + txt_mname.Text + "',m_dob='"+mdob_picker.SelectedDate+ "' where reg_num='"+txt_reg_num.Text +"'", con);
-               
-              
-                cmd.ExecuteNonQuery();
-                con.Close();
+                cmd = new SqlCommand("update BirthCertificate set full_name='" + txt_full_name.Text + "',sex='" + sex + "',place_birth='" + txt_place_birth.Text + "',dob='" + dob_picker.SelectedDate + "',f_name='" + txt_fname.Text + "',f_dob='" + fdob_picker.SelectedDate + "',m_name='" + txt_mname.Text + "',m_dob='" + mdob_picker.SelectedDate + "' where reg_num='" + txt_reg_num.Text + "'", con);
+
+                if(txt_full_name.Text.Length!=0 && txt_full_name.Text.Any(char.IsDigit))
+                {
+                    lbl_fullname.Text = "*Full Name Cannot have Number";
+                    txt_full_name.Focus();
+                }
+                else if(txt_place_birth.Text.Length!=0 && txt_place_birth.Text.Any(char.IsDigit))
+                {
+                    lbl_fullname.Visibility = Visibility.Hidden;
+                    lbl_POB.Text= "*BirthPlace cannot be Number";
+                    txt_place_birth.Focus();
+                }
+                else if (txt_fname.Text.Length != 0 && txt_fname.Text.Any(char.IsDigit))
+                {
+                    lbl_POB.Visibility= Visibility.Hidden;
+                    lbl_faname.Text = "*Father Name cannot be Number";
+                    txt_fname.Focus();
+                }
+                else if (txt_mname.Text.Length != 0 && txt_mname.Text.Any(char.IsDigit))
+                {
+                    lbl_faname.Visibility = Visibility.Hidden;
+                    lbl_moname.Text = "*Father Name cannot be Number";
+                    txt_mname.Focus();
+                }
+                else 
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        MessageBox.Show("Data Save Succesful", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Cannot save", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
             }
+            catch(SqlException)
+            {
+                MessageBox.Show("Error", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch(Exception) 
+            {
+                MessageBox.Show("Error", " Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+                con.Close();
+            
       
         }
 

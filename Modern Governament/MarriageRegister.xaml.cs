@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -71,10 +72,91 @@ namespace Modern_Governament
         {
             DateTime reg_date;
             reg_date = DateTime.Now;
-            con.Open();
-            cmd = new SqlCommand("Insert into MarriageCertificate values('" + txt_reg_num.Text + "','" + dom_picker.SelectedDate + "','" + txt_fp_fname.Text + "','" + txt_fp_nic.Text + "','" + fp_dob_picker.SelectedDate + "','" + txt_fp_address.Text + "','" + txt_fp_faname.Text + "','" + txt_fp_moname.Text + "','" + txt_fp_witness.Text + "','"+txt_sp_fname.Text+"','"+txt_sp_nic.Text+"','"+sp_dob_picker.SelectedDate+"','"+txt_sp_address.Text+"','"+txt_sp_faname.Text+"','"+txt_sp_moname.Text +"','"+txt_sp_witness.Text+"',@b)", con);
-            cmd.Parameters.AddWithValue("b", reg_date);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                con.Open();
+                cmd = new SqlCommand("Insert into MarriageCertificate values('" + txt_reg_num.Text + "','" + dom_picker.SelectedDate + "','" + txt_fp_fname.Text + "','" + txt_fp_nic.Text + "','" + fp_dob_picker.SelectedDate + "','" + txt_fp_address.Text + "','" + txt_fp_faname.Text + "','" + txt_fp_moname.Text + "','" + txt_fp_witness.Text + "','" + txt_sp_fname.Text + "','" + txt_sp_nic.Text + "','" + sp_dob_picker.SelectedDate + "','" + txt_sp_address.Text + "','" + txt_sp_faname.Text + "','" + txt_sp_moname.Text + "','" + txt_sp_witness.Text + "',@b)", con);
+                cmd.Parameters.AddWithValue("b", reg_date);
+                if(dom_picker.SelectedDate==null)
+                {
+                    lbl_error.Text = "*Date of Marriage cannot be blank";
+                }
+                else if(txt_fp_fname.Text.Length==0 || txt_sp_fname.Text.Length==0)
+                {
+                    lbl_error.Text = "Party's Name cannot be blank";
+                }
+                else if(txt_fp_fname.Text.Any(char.IsDigit) || txt_sp_fname.Text.Any(char.IsDigit))
+                {
+                    lbl_error.Text = "Party's Name cannot have number";
+                }
+                else if (txt_fp_nic.Text.Length == 0 || txt_sp_nic.Text.Length == 0)
+                {
+                    lbl_error.Text = "Party's Nic cannot be blank";
+                }
+                else if(!Regex.IsMatch(txt_fp_nic.Text, @"^[0-9]{9}[vVxX]$") && txt_fp_nic.Text.Length!=12)
+                {
+                    lbl_error.Text = "1Party Nic invalid";
+                }
+                else if (!Regex.IsMatch(txt_sp_nic.Text, @"^[0-9]{9}[vVxX]$") && txt_sp_nic.Text.Length != 12)
+                {
+                    lbl_error.Text = "2Party's Nic invalid";
+                }
+                else if(fp_dob_picker.SelectedDate==null || sp_dob_picker.SelectedDate==null)
+                {
+                    lbl_error.Text = "Party's Birthday cannot be null";
+                }
+                else if(txt_fp_address.Text.Length==0 || txt_sp_address.Text.Length==0)
+                {
+                    lbl_error.Text = "Party's Address Cannot be Blank";
+                }
+                else if (txt_fp_address.Text.Any(char.IsDigit) || txt_sp_address.Text.Any(char.IsDigit))
+                {
+                    lbl_error.Text = "Party's address cannot have number";
+                }
+                else if(txt_fp_faname.Text.Length==0 || txt_sp_faname.Text.Length==0)
+                {
+                    lbl_error.Text = "Party's FatherName Cannot be Blank";
+                }
+                else if (txt_fp_faname.Text.Any(char.IsDigit) || txt_sp_faname.Text.Any(char.IsDigit))
+                {
+                    lbl_error.Text = "Party's fathername cannot have number";
+                }
+                else if (txt_fp_moname.Text.Length == 0 || txt_sp_moname.Text.Length == 0)
+                {
+                    lbl_error.Text = "Party's MotherName Cannot be Blank";
+                }
+                else if (txt_fp_witness.Text.Length == 0 || txt_sp_witness.Text.Length == 0)
+                {
+                    lbl_error.Text = "Party's WitnessName Cannot be Blank";
+                }
+                else if (txt_fp_witness.Text.Any(char.IsDigit) || txt_sp_witness.Text.Any(char.IsDigit))
+                {
+                    lbl_error.Text = "Party's Witnessname cannot have number";
+                }
+               
+                else
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        MessageBox.Show("Data Save Succesful", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Cannot save", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            catch(SqlException)
+            {
+                MessageBox.Show("Error", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch(Exception) 
+            {
+                MessageBox.Show("Error", " Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
+      
             con.Close();
         }
     }

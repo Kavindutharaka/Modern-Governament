@@ -114,12 +114,12 @@ namespace Modern_Governament
                 else if(rbn_male.IsChecked==false && rbn_female.IsChecked==false)
                 {
                     lbl_fullname.Visibility = Visibility.Hidden;
-                    lbl_sex.Text = "Please select Gender";
+                    lbl_sex.Text = "*Please select Gender";
                 }
                 else if(string.IsNullOrEmpty(txt_place_birth.Text))
                 {
                     lbl_sex.Visibility= Visibility.Hidden;
-                    lbl_pob.Text = "BirthPlace Cannot be blank";
+                    lbl_pob.Text = "*BirthPlace Cannot be blank";
                     txt_place_birth.Focus();
                 }
                 else if(txt_place_birth.Text.Any(char.IsDigit))
@@ -130,26 +130,39 @@ namespace Modern_Governament
                 else if(dob_picker.SelectedDate==null)
                 {
                     lbl_pob.Visibility= Visibility.Hidden;
-                    lbl_dob.Text = "Birthday Cannot be blank";
+                    lbl_dob.Text = "*Birthday Cannot be blank";
                 }
                 else if(txt_fname.Text.Length==0 && txt_mname.Text.Length==0)
                 {
                     lbl_dob.Visibility= Visibility.Hidden;
-                    lbl_fafname.Text = "Please fill parent details";
-                    lbl_momname.Text= "Please fill parent details";
+                    lbl_fafname.Text = "*Please fill parent details";
+                    lbl_momname.Text= "*Please fill parent details";
+                }
+                else if(txt_fname.Text.Length != 0 && txt_fname.Text.Any(char.IsDigit))
+                {
+                    lbl_momname.Visibility = Visibility.Hidden;
+                    lbl_fafname.Text = "*Father Name cannot be Number";
+                    txt_fname.Focus();
                 }
                 else if(txt_fname.Text.Length != 0 && fdob_picker.SelectedDate == null)
                 {
                     lbl_fafname.Visibility= Visibility.Hidden;
                     lbl_momname.Visibility = Visibility.Hidden;
-                    lbl_fadob.Text = "Father DOB cannot be blank";
+                    lbl_fadob.Text = "*Father DOB cannot be blank";
+                }
+                else if (txt_mname.Text.Length != 0 && txt_mname.Text.Any(char.IsDigit))
+                {
+                    lbl_momname.Visibility = Visibility.Hidden;
+                    lbl_fafname.Text = "*Mother Name cannot be Number";
+                    txt_mname.Focus();
                 }
                 else if (txt_mname.Text.Length != 0 && mdob_picker.SelectedDate == null)
                 {
                     lbl_momname.Visibility= Visibility.Hidden;
                     lbl_fafname.Visibility = Visibility.Hidden;
-                    lbl_modob.Text = "Mother DOB cannot be blank";
-                }  
+                    lbl_modob.Text = "*Mother DOB cannot be blank";
+                } 
+                
                 else
                 {
                     int i= cmd.ExecuteNonQuery();
