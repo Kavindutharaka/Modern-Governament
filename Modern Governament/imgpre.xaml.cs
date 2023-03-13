@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,31 @@ namespace Modern_Governament
         public string img1;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            img_medical.Source = new BitmapImage(new Uri(img1));
+            try
+            {
+                img_medical.Source = new BitmapImage(new Uri(img1));
+
+            }
+            catch (OutOfMemoryException)
+            {
+                MessageBox.Show("Please select image only", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Please select a File", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (NotSupportedException)
+            {
+                MessageBox.Show("Please select image only", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Hide();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Errors", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Hide();
+                
+            }
         }
 
         private void btn_ok_Click(object sender, RoutedEventArgs e)

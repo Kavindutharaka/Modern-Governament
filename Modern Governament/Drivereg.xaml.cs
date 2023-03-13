@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -58,7 +59,7 @@ namespace Modern_Governament
         {
             con = new SqlConnection("Data Source=DESKTOP-13KGUEB;Initial Catalog=Government;Integrated Security=True");
             GetpublicId();
-            
+
         }
 
       
@@ -79,9 +80,94 @@ namespace Modern_Governament
             DateTime reg_date,exp_date;
             reg_date = DateTime.Now;
             exp_date= DateTime.Now.AddYears(5);
-            con.Open();
-            cmd = new SqlCommand("Insert into driverlicen values('" + txt_reg_num.Text + "','" + txt_nic.Text + "','" + txt_fname.Text + "','" + dob_picker.SelectedDate + "','" + sex+ "','" + txt_age.Text + "','" + txt_address .Text+ "','" + txt_tp.Text + "','" + txt_height.Text + "','"+selected  + "','"+reg_date.Date+"','"+exp_date+"')", con);
-            cmd.ExecuteNonQuery();
+            //int age;
+            //  age=int.Parse(dob_picker.SelectedDate);
+           
+            try 
+            {
+                con.Open();
+                cmd = new SqlCommand("Insert into driverlicen values('" + txt_reg_num.Text + "','" + txt_nic.Text + "','" + txt_fname.Text + "','" + dob_picker.SelectedDate + "','" + sex + "','" + txt_age.Text + "','" + txt_address.Text + "','" + txt_tp.Text + "','" + txt_height.Text + "','" + selected + "','" + reg_date.Date + "','" + exp_date.Date + "')", con);
+               if (txt_nic.Text.Length == 0 || txt_nic.Text.Length == 0)
+                {
+                    lbl_nic.Text = "Nic cannot be blank";
+                }
+                else if (!Regex.IsMatch(txt_nic.Text, @"^[0-9]{9}[vVxX]$") && txt_nic.Text.Length != 12)
+                {
+                    lbl_nic.Text = "Nic invalid";
+                }
+               else if(txt_fname.Text.Length==0)
+                {
+                    lbl_nic.Visibility= Visibility.Hidden;
+                    lbl_fullname.Text = "Full name cannot be blank";
+                    txt_fname.Focus();
+                }
+               else if(txt_fname.Text.Any(char.IsDigit))
+                {
+                    lbl_fullname.Text = "Full name cannot have number";
+                }
+               else if(dob_picker.SelectedDate==null)
+                {
+                    lbl_fullname.Visibility= Visibility.Hidden;
+                    lbl_dob.Text = "Please enter date";
+                }
+               else if(rbn_male_Copy.IsChecked==false && rbn_female_Copy.IsChecked==false)
+                {
+                    lbl_dob.Visibility = Visibility.Hidden;
+                    lbl_sex.Text = "*Please select Gender";
+                }
+               else if(int.Parse(txt_age.Text)<18 )
+                {
+                    lbl_sex.Visibility = Visibility.Hidden;
+                    lbl_age.Text = "Invalid age";
+                }
+               else if(txt_address.Text.Length==0)
+                {
+                lbl_age.Visibility = Visibility.Hidden;
+                    lbl_address.Text = "Address cannot be null";
+                }
+                else if (txt_address.Text.Any(char.IsDigit))
+                {
+                 
+                    lbl_address.Text = "Address cannot have number";
+                }
+               else if (!Regex.IsMatch(txt_tp.Text, @"^(?:7|0|(?:\+94))[0-9]{9,10}$"))
+                {
+                    lbl_address.Visibility= Visibility.Hidden;
+                    lbl_tp.Text = "Telephone num Invalid";
+              }
+              else if(double.Parse(txt_height.Text)<0)
+                {
+                    lbl_tp.Visibility= Visibility.Hidden;
+                    lbl_height.Text = "Invalid Height";
+                }
+               else if(cmb_bgroup.SelectedIndex==-1)
+                {
+                    lbl_height.Visibility= Visibility.Hidden;
+                    lbl_bgroup.Text = "Please select blod group";
+                }
+                else
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 1)
+                    {
+                        MessageBox.Show("Data Save Succesful", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Cannot save", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Error", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error", " Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
             con.Close();
         }
 
@@ -126,6 +212,11 @@ namespace Modern_Governament
             {
                 selected = "AB-";
             }
+        }
+
+        private void dob_picker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            txt_age.Text = (DateTime.Now.Year - dob_picker.SelectedDate.Value.Year).ToString();
         }
     }
 }
