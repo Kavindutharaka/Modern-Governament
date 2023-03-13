@@ -106,12 +106,75 @@ namespace Modern_Governament
                     lbl_fullname.Text = "*Full Name Cannot be blank";
                     txt_full_name.Focus();
                 }
+                else if(txt_full_name.Text.Any(char.IsDigit))
+                {
+                    lbl_fullname.Text = "*Full Name Cannot have Number";
+                    txt_full_name.Focus();
+                }
+                else if(rbn_male.IsChecked==false && rbn_female.IsChecked==false)
+                {
+                    lbl_fullname.Visibility = Visibility.Hidden;
+                    lbl_sex.Text = "Please select Gender";
+                }
+                else if(string.IsNullOrEmpty(txt_place_birth.Text))
+                {
+                    lbl_sex.Visibility= Visibility.Hidden;
+                    lbl_pob.Text = "BirthPlace Cannot be blank";
+                    txt_place_birth.Focus();
+                }
+                else if(txt_place_birth.Text.Any(char.IsDigit))
+                {
+                    lbl_pob.Text = "*BirthPlace Cannot have Number";
+                    txt_place_birth.Focus();
+                }
+                else if(dob_picker.SelectedDate==null)
+                {
+                    lbl_pob.Visibility= Visibility.Hidden;
+                    lbl_dob.Text = "Birthday Cannot be blank";
+                }
+                else if(txt_fname.Text.Length==0 && txt_mname.Text.Length==0)
+                {
+                    lbl_dob.Visibility= Visibility.Hidden;
+                    lbl_fafname.Text = "Please fill parent details";
+                    lbl_momname.Text= "Please fill parent details";
+                }
+                else if(txt_fname.Text.Length != 0 && fdob_picker.SelectedDate == null)
+                {
+                    lbl_fafname.Visibility= Visibility.Hidden;
+                    lbl_momname.Visibility = Visibility.Hidden;
+                    lbl_fadob.Text = "Father DOB cannot be blank";
+                }
+                else if (txt_mname.Text.Length != 0 && mdob_picker.SelectedDate == null)
+                {
+                    lbl_momname.Visibility= Visibility.Hidden;
+                    lbl_fafname.Visibility = Visibility.Hidden;
+                    lbl_modob.Text = "Mother DOB cannot be blank";
+                }  
                 else
                 {
                     int i= cmd.ExecuteNonQuery();
                     if (i == 1) 
                     {
                         MessageBox.Show("Data Save Succesful","Info",MessageBoxButton.OK,MessageBoxImage.Information);
+
+                        PrintReg pr1 = new PrintReg();
+                        pr1.lbl_reg.Text = txt_reg_num.Text;
+                        pr1.lbl_fname.Text = txt_full_name.Text;
+                        pr1.lbl_sex.Text = sex;
+                        pr1.lbl_pob.Text = txt_place_birth.Text;
+                        pr1.lbl_dob.Text = dob_picker.Text;
+                        pr1.lbl_ffname.Text = txt_fname.Text;
+                        pr1.lbl_fdob.Text = fdob_picker.Text;
+                        pr1.lbl_mfname.Text = txt_mname.Text;
+                        pr1.lbl_mdob.Text = mdob_picker.Text;
+                        pr1.lbl_regdate.Text = reg_date.ToString();
+
+                        PrintDialog printDlg = new PrintDialog();
+                        if (printDlg.ShowDialog() == true)
+                        {
+                            printDlg.PrintVisual(pr1, "User Control Printing.");
+                        }
+
                     }
                     else
                     {
@@ -125,24 +188,7 @@ namespace Modern_Governament
             { MessageBox.Show("Error", "Database Error", MessageBoxButton.OK, MessageBoxImage.Error); }
             catch (Exception) { MessageBox.Show("Error", " Error", MessageBoxButton.OK, MessageBoxImage.Error); }
 
-            PrintReg pr1=new PrintReg();
-            pr1.lbl_reg.Text = txt_reg_num.Text;
-            pr1.lbl_fname.Text = txt_full_name.Text;
-            pr1.lbl_sex.Text = sex;
-            pr1.lbl_pob.Text = txt_place_birth.Text;
-            pr1.lbl_dob.Text = dob_picker.Text;
-            pr1.lbl_ffname.Text=txt_fname.Text;
-            pr1.lbl_fdob.Text= fdob_picker.Text;
-            pr1.lbl_mfname.Text= txt_mname.Text;
-            pr1.lbl_mdob.Text = mdob_picker.Text;
-            pr1.lbl_regdate.Text = reg_date.ToString();
-            
-            PrintDialog printDlg = new PrintDialog();
-            if (printDlg.ShowDialog() == true)
-            {
-                printDlg.PrintVisual(pr1,"User Control Printing.");
-            }
-
+        
         }
     }
 }

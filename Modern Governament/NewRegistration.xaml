@@ -224,6 +224,13 @@
                     </DatePicker.BorderBrush>
                 </DatePicker>
                 <TextBlock x:Name="lbl_fullname" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="210" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="lbl_sex" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="273" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="lbl_pob" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="340" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="lbl_dob" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="404" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="lbl_fafname" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="465" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="lbl_fadob" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="515" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="lbl_momname" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="578" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
+                <TextBlock x:Name="lbl_modob" TextWrapping="Wrap"  Canvas.Left="867" Canvas.Top="635" HorizontalAlignment="Center" VerticalAlignment="Top" Width="193" Foreground="White" FontSize="14"/>
             </Canvas>
 
 
